@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrCompCarriers.proto";
+
+enum RFmxNRMXComponentCarrierSpacingType {
+    Nominal_010jdgh = 0;
+    User_010gmed = 2;
+    pponjy = 500;
+}
+
+enum RFmxNRMXFrequencyRange {
+    Range1_010zous = 0;
+    Range2_010eupi = 1;
+    afajat = 500;
+}
+
+message NrSubBlock {
+    google.protobuf.Int32Value Band = 1;
+    google.protobuf.DoubleValue ChannelRaster = 2;
+    google.protobuf.Int32Value ComponentCarrierAtCenterFrequency = 3;
+    RFmxNRMXComponentCarrierSpacingType ComponentCarrierSpacingType = 4;
+    RFmxNRMXFrequencyRange FrequencyRange = 5;
+    google.protobuf.Int32Value NumberOfComponentCarriers = 6;
+    google.protobuf.DoubleValue PhaseCompensationFrequency = 7;
+    google.protobuf.DoubleValue SubblockEndcNominalSpacingAdjustment = 8;
+    google.protobuf.DoubleValue SubblockFrequency = 9;
+    google.protobuf.DoubleValue SubblockTransmitLOFrequency = 10;
+
+    repeated NrCompCarriers CompCarriers = 11;
+}

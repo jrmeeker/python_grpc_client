@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/ResultWrappers.proto";
+
+enum RsmxNRMXSemLowerOffsetMeasurementStatus {
+    Fail_010isev = 0;
+    Pass_010xukg = 1;
+    RequestResult_010chtx = 400;
+    gjygqx = 500;
+}
+
+enum RsmxNRMXSemUpperOffsetMeasurementStatus {
+    Fail_010fffv = 0;
+    Pass_010oggj = 1;
+    RequestResult_010zflv = 400;
+    ouhfiw = 500;
+}
+
+message NrSemOffsetsResults {
+    DoubleResult LowerOffsetAbsoluteIntegratedPower = 1;
+    DoubleResult LowerOffsetAbsolutePeakPower = 2;
+    DoubleResult LowerOffsetMargin = 3;
+    DoubleResult LowerOffsetMarginAbsolutePower = 4;
+    DoubleResult LowerOffsetMarginFrequency = 5;
+    DoubleResult LowerOffsetMarginRelativePower = 6;
+    RsmxNRMXSemLowerOffsetMeasurementStatus LowerOffsetMeasurementStatus = 7;
+    DoubleResult LowerOffsetPeakFrequency = 8;
+    DoubleResult LowerOffsetRelativeIntegratedPower = 9;
+    DoubleResult LowerOffsetRelativePeakPower = 10;
+    DoubleResult UpperOffsetAbsoluteIntegratedPower = 11;
+    DoubleResult UpperOffsetAbsolutePeakPower = 12;
+    DoubleResult UpperOffsetMargin = 13;
+    DoubleResult UpperOffsetMarginAbsolutePower = 14;
+    DoubleResult UpperOffsetMarginFrequency = 15;
+    DoubleResult UpperOffsetMarginRelativePower = 16;
+    RsmxNRMXSemUpperOffsetMeasurementStatus UpperOffsetMeasurementStatus = 17;
+    DoubleResult UpperOffsetPeakFrequency = 18;
+    DoubleResult UpperOffsetRelativeIntegratedPower = 19;
+    DoubleResult UpperOffsetRelativePeakPower = 20;
+}

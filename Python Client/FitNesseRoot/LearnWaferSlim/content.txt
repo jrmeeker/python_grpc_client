@@ -1,0 +1,25 @@
+!contents -R2 -g -p -f -h
+!1 
+!3 Variable Setup
+!define TEST_SYSTEM {slim}
+!define SLIM_VERSION {0.1}
+!path /Users/redmond/fitnesseTests/
+!define COMMAND_PATTERN {python -m waferslim.server --syspath %p} --
+!3 Imports
+| import |
+
+| waferslim.examples.decision_table |
+
+| Calc.Calc |
+
+| Calc |
+
+| A | B | multiply? |
+
+| 1 | 2 | 2 |
+
+| 1 | 0 | 0 |
+
+| 3 | 5 | 15 |
+
+| 5 | 5 | 26 |

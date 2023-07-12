@@ -1,0 +1,232 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxInstrMXAdvanceTriggerType {
+    None_010zpgq = 0;
+    DigitalEdge_010uifd = 1;
+    Software_010hzkx = 3;
+    lxtfdq = 500;
+}
+
+enum RFmxInstrMXAutomaticSGSASharedLO {
+    Disabled_010ezpa = 0;
+    Enabled_010lzcn = 1;
+    vdwuwj = 500;
+}
+
+enum RFmxInstrMXChannelCoupling {
+    ACCoupled_010iydc = 0;
+    DCCoupled_010uvsz = 1;
+    esynrr = 500;
+}
+
+enum RFmxInstrMXCleanerSpectrum {
+    Disabled_010yodw = 0;
+    Enabled_010dqiy = 1;
+    eyehnh = 500;
+}
+
+enum RFmxInstrMXDeviceSynchronizationMode {
+    TriggerSharing_010mbhn = 0;
+    TClkSynchronization_010cbpn = 1;
+    urkhye = 500;
+}
+
+enum RFmxInstrMXDigitizerDitherEnabled {
+    Disabled_010vwcx = 0;
+    Enabled_010hlpg = 1;
+    aargaj = 500;
+}
+
+enum RFmxInstrMXDownconverterPreselectorEnabled {
+    Disabled_010teyn = 0;
+    Enabled_010ilnd = 1;
+    llkpcl = 500;
+}
+
+enum RFmxInstrMXFrequencySettlingUnits {
+    Ppm_010ummv = 0;
+    SecondsAfterLock_010sddh = 1;
+    SecondsAfterIO_010wgzc = 2;
+    sgagvw = 500;
+}
+
+enum RFmxInstrMXInputIsolationEnabled {
+    Disabled_010bftp = 0;
+    Enabled_010swzm = 1;
+    rrlqns = 500;
+}
+
+enum RFmxInstrMXLO2ExportEnabled {
+    Disabled_010ielo = 0;
+    Enabled_010nvnw = 1;
+    gmhrng = 500;
+}
+
+enum RFmxInstrMXLOInjectionSide {
+    HighSide_010tgce = 0;
+    LowSide_010pnow = 1;
+    retpwf = 500;
+}
+
+enum RFmxInstrMXLOLeakageAvoidanceEnabled {
+    False_010mlvg = 0;
+    True_010shto = 1;
+    umtaje = 500;
+}
+
+enum RFmxInstrMXLOPllFractionalMode {
+    Disabled_010zhib = 0;
+    Enabled_010jttk = 1;
+    phaadl = 500;
+}
+
+enum RFmxInstrMXLOSharingMode {
+    Disabled_010mguy = 0;
+    OnboardStar_010zhkv = 1;
+    OnboardDaisyChain_010qbyg = 2;
+    ExternalStar_010mflp = 3;
+    ExternalDaisyChain_010lpdk = 4;
+    xkwsgc = 500;
+}
+
+enum RFmxInstrMXMechanicalAttenuationAuto {
+    False_010mbvo = 0;
+    True_010fseh = 1;
+    bosuac = 500;
+}
+
+enum RFmxInstrMXOptimizePathForSignalBandwidth {
+    Disabled_010tdrh = 0;
+    Enabled_010ccgo = 1;
+    Automatic_010zzwk = 2;
+    wtnbjc = 500;
+}
+
+enum RFmxInstrMXOspDelayEnabled {
+    Disabled_010swuj = 0;
+    Enabled_010zbvg = 1;
+    cfdxxq = 500;
+}
+
+enum RFmxInstrMXOverflowErrorReporting {
+    Warning_010pbqt = 0;
+    Disabled_010tppd = 1;
+    wxcwru = 500;
+}
+
+enum RFmxInstrMXPreampEnabled {
+    Disabled_010wkua = 0;
+    Enabled_010epcd = 1;
+    Automatic_010hkep = 3;
+    mwablb = 500;
+}
+
+enum RFmxInstrMXRFAttenuationAuto {
+    False_010cfvv = 0;
+    True_010ctiu = 1;
+    moaxhd = 500;
+}
+
+enum RFmxInstrMXSelfCalibrationValidityCheck {
+    Off_010kakr = 0;
+    Enabled_010ldsi = 1;
+    nltgpd = 500;
+}
+
+enum RFmxInstrMXStartTriggerDigitalEdge {
+    Rising_010dtcv = 0;
+    Falling_010matm = 1;
+    zaharj = 500;
+}
+
+enum RFmxInstrMXStartTriggerType {
+    None_010codk = 0;
+    DigitalEdge_010dbfl = 1;
+    Software_010mjqi = 3;
+    iurjbw = 500;
+}
+
+enum RFmxInstrMXTuningSpeed {
+    Normal_010eert = 0;
+    Medium_010lelg = 1;
+    Fast_010jybj = 2;
+    jkljfz = 500;
+}
+
+message Inst {
+    google.protobuf.StringValue AdvanceTriggerDigitalEdgeSource = 1;
+    google.protobuf.StringValue AdvanceTriggerExportOutputTerminal = 2;
+    RFmxInstrMXAdvanceTriggerType AdvanceTriggerType = 3;
+    google.protobuf.DoubleValue AmplitudeSettling = 4;
+    RFmxInstrMXAutomaticSGSASharedLO AutomaticSGSASharedLO = 5;
+    RFmxInstrMXChannelCoupling ChannelCoupling = 6;
+    RFmxInstrMXCleanerSpectrum CleanerSpectrum = 7;
+    google.protobuf.DoubleValue CommonModeLevel = 8;
+    RFmxInstrMXDeviceSynchronizationMode DeviceSynchronizationMode = 9;
+    RFmxInstrMXDigitizerDitherEnabled DigitizerDitherEnabled = 10;
+    google.protobuf.StringValue DoneEventOutputTerminal = 11;
+    google.protobuf.DoubleValue DownconverterCenterFrequency = 12;
+    google.protobuf.DoubleValue DownconverterFrequencyOffset = 13;
+    RFmxInstrMXDownconverterPreselectorEnabled DownconverterPreselectorEnabled = 14;
+    google.protobuf.StringValue EndOfRecordEventOutputTerminal = 15;
+    google.protobuf.DoubleValue FftWidth = 16;
+    google.protobuf.BoolValue ForceAllTracesEnabled = 17;
+    google.protobuf.StringValue FrequencyReferenceExportedTerminal = 18;
+    google.protobuf.DoubleValue FrequencyReferenceFrequency = 19;
+    google.protobuf.StringValue FrequencyReferenceSource = 20;
+    google.protobuf.DoubleValue FrequencySettling = 21;
+    RFmxInstrMXFrequencySettlingUnits FrequencySettlingUnits = 22;
+    google.protobuf.DoubleValue IFFilterBandwidth = 23;
+    google.protobuf.DoubleValue IFOutputPowerLevelOffset = 24;
+    RFmxInstrMXInputIsolationEnabled InputIsolationEnabled = 25;
+    google.protobuf.DoubleValue IQFrequencyOffset = 26;
+    RFmxInstrMXLO2ExportEnabled LO2ExportEnabled = 27;
+    google.protobuf.BoolValue LOExportEnabled = 28;
+    google.protobuf.DoubleValue LOFrequency = 29;
+    google.protobuf.DoubleValue LOFrequencyStepSize = 30;
+    RFmxInstrMXLOInjectionSide LOInjectionSide = 31;
+    google.protobuf.DoubleValue LOInPower = 32;
+    RFmxInstrMXLOLeakageAvoidanceEnabled LOLeakageAvoidanceEnabled = 33;
+    google.protobuf.DoubleValue LOOutPower = 34;
+    RFmxInstrMXLOPllFractionalMode LOPllFractionalMode = 35;
+    RFmxInstrMXLOSharingMode LOSharingMode = 36;
+    google.protobuf.StringValue LOSource = 37;
+    google.protobuf.DoubleValue LOVcoFrequencyStepSize = 38;
+    RFmxInstrMXMechanicalAttenuationAuto MechanicalAttenuationAuto = 39;
+    google.protobuf.DoubleValue MechanicalAttenuationValue = 40;
+    google.protobuf.DoubleValue MixerLevel = 41;
+    google.protobuf.DoubleValue MixerLevelOffset = 42;
+    google.protobuf.Int32Value NumberOfLOSharingGroups = 43;
+    RFmxInstrMXOptimizePathForSignalBandwidth OptimizePathForSignalBandwidth = 44;
+    RFmxInstrMXOspDelayEnabled OspDelayEnabled = 45;
+    RFmxInstrMXOverflowErrorReporting OverflowErrorReporting = 46;
+    google.protobuf.DoubleValue PhaseOffset = 47;
+    RFmxInstrMXPreampEnabled PreampEnabled = 48;
+    google.protobuf.StringValue ReadyForAdvanceEventOutputTerminal = 49;
+    google.protobuf.StringValue ReadyForReferenceEventOutputTerminal = 50;
+    google.protobuf.StringValue ReadyForStartEventOutputTerminal = 51;
+    RFmxInstrMXRFAttenuationAuto RFAttenuationAuto = 52;
+    google.protobuf.DoubleValue RFAttenuationStepSize = 53;
+    google.protobuf.DoubleValue RFAttenuationValue = 54;
+    google.protobuf.DoubleValue RFHighpassFilterFrequency = 55;
+    RFmxInstrMXSelfCalibrationValidityCheck SelfCalibrationValidityCheck = 56;
+    google.protobuf.DoubleValue SelfCalibrationValidityCheckTimeInterval = 57;
+    google.protobuf.StringValue SmuChannel = 58;
+    google.protobuf.StringValue SmuResourceName = 59;
+    RFmxInstrMXStartTriggerDigitalEdge StartTriggerDigitalEdge = 60;
+    google.protobuf.StringValue StartTriggerDigitalEdgeSource = 61;
+    google.protobuf.StringValue StartTriggerExportOutputTerminal = 62;
+    RFmxInstrMXStartTriggerType StartTriggerType = 63;
+    google.protobuf.DoubleValue SubSpanOverlap = 64;
+    google.protobuf.DoubleValue TemperatureReadInterval = 65;
+    google.protobuf.DoubleValue ThermalCorrectionHeadroomRange = 66;
+    google.protobuf.DoubleValue ThermalCorrectionTemperatureResolution = 67;
+    google.protobuf.StringValue TriggerExportOutputTerminal = 68;
+    RFmxInstrMXTuningSpeed TuningSpeed = 69;
+}

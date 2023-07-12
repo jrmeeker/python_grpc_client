@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxSpecAnMXAcpCarrierMode {
+    Passive_010bksj = 0;
+    Active_010hzuo = 1;
+    kkmiwr = 500;
+}
+
+enum RFmxSpecAnMXAcpCarrierRrcFilterEnabled {
+    False_010zncf = 0;
+    True_010houo = 1;
+    dzpdnw = 500;
+}
+
+message SpecAnAcpCompCarrier {
+    google.protobuf.DoubleValue CarrierFrequency = 1;
+    google.protobuf.DoubleValue CarrierIntegrationBandwidth = 2;
+    RFmxSpecAnMXAcpCarrierMode CarrierMode = 3;
+    google.protobuf.DoubleValue CarrierRrcFilterAlpha = 4;
+    RFmxSpecAnMXAcpCarrierRrcFilterEnabled CarrierRrcFilterEnabled = 5;
+}

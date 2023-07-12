@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxPolicy.proto";
+import "RfmxSpecAnAcpResults.proto";
+import "RfmxSpecAnSpectrumResults.proto";
+import "PRfmxSpecAnCcdfResults.proto";
+import "RfmxSpecAnIqResults.proto";
+
+message SpecAnResults {
+
+    Policy Policy = 1;
+    SpecAnAcpResults SpecAnAcpResults = 2;
+    SpecAnSpectrumResults SpecAnSpectrumResults = 3;
+    SpecAnCcdfResults SpecAnCcdfResults = 4;
+    SpecAnIqResults SpecAnIqResults = 5;
+}

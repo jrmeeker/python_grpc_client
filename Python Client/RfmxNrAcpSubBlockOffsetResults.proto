@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+message NrAcpSubBlockOffsetResults {
+    DoubleResult LowerOffsetAbsolutePower = 1;
+    DoubleResult LowerOffsetRelativePower = 2;
+    DoubleResult UpperOffsetAbsolutePower = 3;
+    DoubleResult UpperOffsetRelativePower = 4;
+}

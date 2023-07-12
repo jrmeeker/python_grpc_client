@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "RfmxNrPusch.proto";
+import "RfmxNrPdsch.proto";
+
+message NrUser {
+    google.protobuf.Int32Value NumberOfPdschConfigurations = 1;
+    google.protobuf.Int32Value NumberOfPuschConfigurations = 2;
+    google.protobuf.Int32Value Rnti = 3;
+
+    repeated NrPusch Pusch = 4;
+    repeated NrPdsch Pdsch = 5;
+}

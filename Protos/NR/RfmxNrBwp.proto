@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrUser.proto";
+
+enum RFmxNRMXBandwidthPartCyclicPrefixMode {
+    Normal_010yhot = 0;
+    Extended_010ykzt = 1;
+    nqbzuy = 500;
+}
+
+enum RFmxNRMXCoresetCceToRegMappingType {
+    NonInterleaved_010xphs = 0;
+    Interleaved_010yjik = 1;
+    afvvgj = 500;
+}
+
+enum RFmxNRMXCoresetPrecodingGranularity {
+    SameAsRegBundle_010jwgf = 0;
+    AllContiguousResourceBlocks_010mfjt = 1;
+    zknbeq = 500;
+}
+
+message NrBwp {
+    RFmxNRMXBandwidthPartCyclicPrefixMode BandwidthPartCyclicPrefixMode = 1;
+    google.protobuf.Int32Value BandwidthPartNumberOfResourceBlocks = 2;
+    google.protobuf.Int32Value BandwidthPartResourceBlockOffset = 3;
+    google.protobuf.DoubleValue BandwidthPartSubcarrierSpacing = 4;
+    RFmxNRMXCoresetCceToRegMappingType CoresetCceToRegMappingType = 5;
+    google.protobuf.Int32Value CoresetInterleaverSize = 6;
+    google.protobuf.Int32Value CoresetNumberOfResourceBlockClusters = 7;
+    google.protobuf.Int32Value CoresetNumberOfResourceBlocks = 8;
+    google.protobuf.Int32Value CoresetNumberOfSymbols = 9;
+    RFmxNRMXCoresetPrecodingGranularity CoresetPrecodingGranularity = 10;
+    google.protobuf.Int32Value CoresetRegBundleSize = 11;
+    google.protobuf.Int32Value CoresetShiftIndex = 12;
+    google.protobuf.Int32Value CoresetSymbolOffset = 13;
+    google.protobuf.Int32Value GridSize = 14;
+    google.protobuf.Int32Value GridStart = 15;
+    google.protobuf.Int32Value NumberOfCoresets = 16;
+    google.protobuf.Int32Value NumberOfPdcchConfigurations = 17;
+    google.protobuf.Int32Value NumberOfUsers = 18;
+
+    repeated NrUser User = 19;
+}

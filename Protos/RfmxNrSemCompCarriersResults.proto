@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+message NrSemCompCarriersResults {
+    DoubleResult AbsoluteIntegratedPower = 1;
+    DoubleResult AbsolutePeakPower = 2;
+    DoubleResult PeakFrequency = 3;
+    DoubleResult RelativeIntegratedPower = 4;
+}

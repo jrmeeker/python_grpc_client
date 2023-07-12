@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+message NrPdschCluster {
+    google.protobuf.Int32Value PdschNumberOfResourceBlocks = 1;
+    google.protobuf.Int32Value PdschResourceBlockOffset = 2;
+}

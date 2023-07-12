@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxSpecAnMXIQBandwidthAuto {
+    False_010xysi = 0;
+    True_010afgk = 1;
+    jhixgn = 500;
+}
+
+enum RFmxSpecAnMXIQDeleteRecordOnFetch {
+    False_010xfqj = 0;
+    True_010qjdb = 1;
+    duolyj = 500;
+}
+
+message SpecAnIq {
+    google.protobuf.DoubleValue AcquisitionTime = 1;
+    RFmxSpecAnMXIQBandwidthAuto BandwidthAuto = 2;
+    RFmxSpecAnMXIQDeleteRecordOnFetch DeleteRecordOnFetch = 3;
+    google.protobuf.BoolValue MeasurementEnabled = 4;
+    google.protobuf.Int32Value NumberOfRecords = 5;
+    google.protobuf.DoubleValue PretriggerTime = 6;
+    google.protobuf.DoubleValue SampleRate = 7;
+}

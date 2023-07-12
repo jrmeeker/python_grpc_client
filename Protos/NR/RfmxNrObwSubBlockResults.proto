@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/ResultWrappers.proto";
+
+message NrObwSubBlockResults {
+    DoubleResult AbsolutePower = 1;
+    DoubleResult OccupiedBandwidth = 2;
+    DoubleResult StartFrequency = 3;
+    DoubleResult StopFrequency = 4;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "RfmxNrSemOffsets.proto";
+import "RfmxNrSemCompCarriers.proto";
+
+message NrSemSubBlock {
+    google.protobuf.DoubleValue SubblockAggregatedChannelBandwidth = 1;
+    google.protobuf.DoubleValue SubblockIntegrationBandwidth = 2;
+    google.protobuf.Int32Value NumberOfOffsets = 3;
+
+    repeated NrSemOffsets SemOffsets = 4;
+    repeated NrSemCompCarriers SemCompCarriers = 5;
+}

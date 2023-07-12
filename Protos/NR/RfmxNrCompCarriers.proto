@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrBwp.proto";
+
+enum RFmxNRMXComponentCarrierAllocated {
+    False_010jduk = 0;
+    True_010gkcl = 1;
+    efbilo = 500;
+}
+
+enum RFmxNRMXDownlinkTestModel {
+    TM1_1_010hjxc = 0;
+    TM1_2_010dqkq = 1;
+    TM2_010jwno = 2;
+    TM2a_010odqw = 3;
+    TM3_1_010fwfr = 4;
+    TM3_1a_010awkl = 5;
+    TM3_2_010pwgx = 6;
+    TM3_3_010sbed = 7;
+    TM2b_010uvlq = 8;
+    TM3_1b_010mlyo = 9;
+    ftuywr = 500;
+}
+
+enum RFmxNRMXDownlinkTestModelDuplexScheme {
+    Fdd_010vyvh = 0;
+    Tdd_010zect = 1;
+    nkymmh = 500;
+}
+
+enum RFmxNRMXDownlinkTestModelModulationType {
+    Standard_010jnyh = 0;
+    Qpsk_010sjut = 1;
+    Qam16_010szku = 2;
+    Qam64_010yrlh = 3;
+    cmpxah = 500;
+}
+
+enum RFmxNRMXComponentCarrierRadioAccessType {
+    NR_010bkbz = 0;
+    Eutra_010baha = 1;
+    sayqes = 500;
+}
+
+enum RFmxNRMXSsbEnabled {
+    False_010vmfm = 0;
+    True_010xbgw = 1;
+    xfglhg = 500;
+}
+
+enum RFmxNRMXSsbPattern {
+    CaseAUpTo3GHz_010ilwp = 0;
+    CaseA3GHzTo6GHz_010hbln = 1;
+    CaseBUpTo3GHz_010ftit = 2;
+    CaseB3GHzTo6GHz_010mrhj = 3;
+    CaseCUpTo3GHz_010whmt = 4;
+    CaseC3GHzTo6GHz_010lphc = 5;
+    CaseD_010aybf = 6;
+    CaseE_010mvsp = 7;
+    sasgdi = 500;
+}
+
+message NrCompCarriers {
+    RFmxNRMXComponentCarrierAllocated Allocated = 1;
+    google.protobuf.DoubleValue Bandwidth = 2;
+    google.protobuf.Int32Value CellID = 3;
+    RFmxNRMXDownlinkTestModel DownlinkTestModel = 4;
+    RFmxNRMXDownlinkTestModelDuplexScheme DownlinkTestModelDuplexScheme = 5;
+    RFmxNRMXDownlinkTestModelModulationType DownlinkTestModelModulationType = 6;
+    google.protobuf.DoubleValue Frequency = 7;
+    google.protobuf.Int32Value NumberOfBandwidthParts = 8;
+    google.protobuf.DoubleValue PbchDmrsPower = 9;
+    google.protobuf.DoubleValue PbchPower = 10;
+    google.protobuf.DoubleValue PssPower = 11;
+    RFmxNRMXComponentCarrierRadioAccessType RadioAccessType = 12;
+    google.protobuf.DoubleValue RatedEirp = 13;
+    google.protobuf.DoubleValue RatedTrp = 14;
+    google.protobuf.Int32Value ReferenceGridSize = 15;
+    google.protobuf.Int32Value ReferenceGridStart = 16;
+    google.protobuf.DoubleValue ReferenceGridSubcarrierSpacing = 17;
+    google.protobuf.StringValue SsbActiveBlocks = 18;
+    google.protobuf.Int32Value SsbCrbOffset = 19;
+    RFmxNRMXSsbEnabled SsbEnabled = 20;
+    google.protobuf.Int32Value SsbGridSize = 21;
+    google.protobuf.Int32Value SsbGridStart = 22;
+    google.protobuf.Int32Value SsbHrfIndex = 23;
+    RFmxNRMXSsbPattern SsbPattern = 24;
+    google.protobuf.DoubleValue SsbPeriodicity = 25;
+    google.protobuf.Int32Value SsbSubcarrierOffset = 26;
+    google.protobuf.DoubleValue SssPower = 27;
+    google.protobuf.DoubleValue SubcarrierSpacingCommon = 28;
+
+    repeated NrBwp Bwp = 29;
+}

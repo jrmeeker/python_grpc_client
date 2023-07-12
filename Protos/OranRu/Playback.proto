@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+
+
+message Playback {
+    google.protobuf.StringValue WaveformFileName = 1;
+    google.protobuf.DoubleValue RuTransmitFrequencyHz = 2;
+    google.protobuf.DoubleValue RuTransmitPowerdBm = 3;
+    google.protobuf.StringValue RuTransmitAnt = 4;
+    google.protobuf.StringValue TdmsFilePath = 5;
+    google.protobuf.StringValue PlaybackFolder = 6;
+    google.protobuf.DoubleValue DownlinkCompCarrierBandWidth = 7;
+    google.protobuf.DoubleValue DownlinkSubCarrierSpacing = 8;
+    google.protobuf.Int32Value DownlinkCaseId = 9;
+    google.protobuf.StringValue FtpServer = 10;
+    google.protobuf.StringValue UserName = 11;
+    google.protobuf.StringValue Password = 12;
+    google.protobuf.StringValue UploadDirectory = 13;
+    google.protobuf.StringValue SourceDirectory = 14;
+    google.protobuf.StringValue FileExt = 15;
+}

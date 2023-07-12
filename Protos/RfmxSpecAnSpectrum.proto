@@ -1,0 +1,165 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxSpecAnMXSpectrumAmplitudeCorrectionType {
+    RFCenterFrequency_010jgbt = 0;
+    SpectrumFrequencyBin_010fnir = 1;
+    dvoyar = 500;
+}
+
+enum RFmxSpecAnMXSpectrumAnalysisInput {
+    IQ_010pqcf = 0;
+    IOnly_010tgbm = 1;
+    QOnly_010wmfd = 2;
+    xmpbqr = 500;
+}
+
+enum RFmxSpecAnMXSpectrumAveragingEnabled {
+    False_010upgu = 0;
+    True_010ffdg = 1;
+    myniml = 500;
+}
+
+enum RFmxSpecAnMXSpectrumAveragingType {
+    Rms_010vise = 0;
+    Log_010btrs = 1;
+    Scalar_010dxkp = 2;
+    Maximum_010obpv = 3;
+    Minimum_010bbew = 4;
+    dklvlx = 500;
+}
+
+enum RFmxSpecAnMXSpectrumDetectorType {
+    None_010cmtd = 0;
+    Sample_010zozt = 1;
+    Normal_010hpuk = 2;
+    Peak_010zwac = 3;
+    NegativePeak_010mjkq = 4;
+    AverageRms_010rbqq = 5;
+    AverageVoltage_010wldq = 6;
+    AverageLog_010hlww = 7;
+    tereyz = 500;
+}
+
+enum RFmxSpecAnMXSpectrumFftWindow {
+    None_010xvpu = 0;
+    FlatTop_010uaar = 1;
+    Hanning_010civa = 2;
+    Hamming_010ybkv = 3;
+    Gaussian_010fbvc = 4;
+    Blackman_010hokj = 5;
+    BlackmanHarris_010mwsx = 6;
+    KaiserBessel_010qufv = 7;
+    dmmoaw = 500;
+}
+
+enum RFmxSpecAnMXSpectrumMeasurementMode {
+    Measure_010hqqe = 0;
+    CalibrateNoiseFloor_010jvuh = 1;
+    mvmyyp = 500;
+}
+
+enum RFmxSpecAnMXSpectrumNoiseCalibrationAveragingAuto {
+    False_010jvsi = 0;
+    True_010lfix = 1;
+    hdahcz = 500;
+}
+
+enum RFmxSpecAnMXSpectrumNoiseCalibrationMode {
+    Manual_010xmpw = 0;
+    Auto_010ujuf = 1;
+    mcfpoe = 500;
+}
+
+enum RFmxSpecAnMXSpectrumNoiseCompensationEnabled {
+    False_010kxls = 0;
+    True_010wpmh = 1;
+    tdduoj = 500;
+}
+
+enum RFmxSpecAnMXSpectrumNoiseCompensationType {
+    AnalyzerAndTermination_010jneb = 0;
+    AnalyzerOnly_010sujz = 1;
+    gqepve = 500;
+}
+
+enum RFmxSpecAnMXSpectrumPowerUnits {
+    dBm_010jqdv = 0;
+    dBmPerHertz_010rdnj = 1;
+    dBW_010riln = 2;
+    dBV_010mptl = 3;
+    dBmV_010szuk = 4;
+    dBuV_010vzxd = 5;
+    Watts_010xuvk = 6;
+    Volts_010qvng = 7;
+    VoltsSquared_010tiyc = 8;
+    aidlwz = 500;
+}
+
+enum RFmxSpecAnMXSpectrumRbwAutoBandwidth {
+    False_010vvqf = 0;
+    True_010hugv = 1;
+    xevlij = 500;
+}
+
+enum RFmxSpecAnMXSpectrumRbwFilterBandwidthDefinition {
+    BandwidthDefinition3dB_010szyw = 0;
+    BandwidthDefinition6dB_010hcsw = 1;
+    BandwidthDefinitionBinWidth_010uetd = 2;
+    BandwidthDefinitionEnbw_010rqlk = 3;
+    vioveb = 500;
+}
+
+enum RFmxSpecAnMXSpectrumRbwFilterType {
+    FftBased_010msmb = 0;
+    Gaussian_010evxj = 1;
+    Flat_010kiao = 2;
+    kajgdt = 500;
+}
+
+enum RFmxSpecAnMXSpectrumSweepTimeAuto {
+    False_010gybl = 0;
+    True_010ldcp = 1;
+    jnjmxm = 500;
+}
+
+enum RFmxSpecAnMXSpectrumVbwFilterAutoBandwidth {
+    False_010fqmg = 0;
+    True_010kgyx = 1;
+    zluldc = 500;
+}
+
+message SpecAnSpectrum {
+    RFmxSpecAnMXSpectrumAmplitudeCorrectionType AmplitudeCorrectionType = 1;
+    RFmxSpecAnMXSpectrumAnalysisInput AnalysisInput = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxSpecAnMXSpectrumAveragingEnabled AveragingEnabled = 4;
+    RFmxSpecAnMXSpectrumAveragingType AveragingType = 5;
+    google.protobuf.Int32Value DetectorPoints = 6;
+    RFmxSpecAnMXSpectrumDetectorType DetectorType = 7;
+    google.protobuf.DoubleValue FftPadding = 8;
+    RFmxSpecAnMXSpectrumFftWindow FftWindow = 9;
+    google.protobuf.BoolValue MeasurementEnabled = 10;
+    RFmxSpecAnMXSpectrumMeasurementMode MeasurementMode = 11;
+    RFmxSpecAnMXSpectrumNoiseCalibrationAveragingAuto NoiseCalibrationAveragingAuto = 12;
+    google.protobuf.Int32Value NoiseCalibrationAveragingCount = 13;
+    RFmxSpecAnMXSpectrumNoiseCalibrationMode NoiseCalibrationMode = 14;
+    RFmxSpecAnMXSpectrumNoiseCompensationEnabled NoiseCompensationEnabled = 15;
+    RFmxSpecAnMXSpectrumNoiseCompensationType NoiseCompensationType = 16;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 17;
+    RFmxSpecAnMXSpectrumPowerUnits PowerUnits = 18;
+    RFmxSpecAnMXSpectrumRbwAutoBandwidth RbwFilterAutoBandwidth = 19;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 20;
+    RFmxSpecAnMXSpectrumRbwFilterBandwidthDefinition RbwFilterBandwidthDefinition = 21;
+    RFmxSpecAnMXSpectrumRbwFilterType RbwFilterType = 22;
+    google.protobuf.DoubleValue Span = 23;
+    RFmxSpecAnMXSpectrumSweepTimeAuto SweepTimeAuto = 24;
+    google.protobuf.DoubleValue SweepTimeInterval = 25;
+    RFmxSpecAnMXSpectrumVbwFilterAutoBandwidth VbwFilterAutoBandwidth = 26;
+    google.protobuf.DoubleValue VbwFilterBandwidth = 27;
+}

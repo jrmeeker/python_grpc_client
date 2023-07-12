@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+enum RsmxNRMXPvtMeasurementStatus {
+    Fail_010fmex = 0;
+    Pass_010povf = 1;
+    RequestResult_010vgtz = 400;
+    pbabks = 500;
+}
+
+message NrPvtCompCarriersResults {
+    DoubleResult AbsoluteOffPowerAfter = 1;
+    DoubleResult AbsoluteOffPowerBefore = 2;
+    DoubleResult AbsoluteONPower = 3;
+    DoubleResult BurstWidth = 4;
+    RsmxNRMXPvtMeasurementStatus MeasurementStatus = 5;
+    DoubleResult PeakWindowedOffPower = 6;
+    DoubleResult PeakWindowedOffPowerMargin = 7;
+    DoubleResult PeakWindowedOffPowerTime = 8;
+}

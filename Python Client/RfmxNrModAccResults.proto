@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxNrModAccSubBlockResults.proto";
+
+enum RsmxNRMXModAccNoiseCompensationApplied {
+    False_010tiwh = 0;
+    True_010onlk = 1;
+    RequestResult_010ducw = 400;
+    tteofk = 500;
+}
+
+message NrModAccResults {
+    RsmxNRMXModAccNoiseCompensationApplied NoiseCompensationApplied = 1;
+
+    repeated NrModAccSubBlockResults ModAccSubBlockResults = 2;
+}

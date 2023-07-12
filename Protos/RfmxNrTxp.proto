@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxNRMXTxpAveragingEnabled {
+    False_010gglt = 0;
+    True_010hoen = 1;
+    okzcjo = 500;
+}
+
+message NrTxp {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    google.protobuf.Int32Value AveragingCount = 2;
+    RFmxNRMXTxpAveragingEnabled AveragingEnabled = 3;
+    google.protobuf.BoolValue MeasurementEnabled = 4;
+    google.protobuf.DoubleValue MeasurementInterval = 5;
+    google.protobuf.DoubleValue MeasurementOffset = 6;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 7;
+}

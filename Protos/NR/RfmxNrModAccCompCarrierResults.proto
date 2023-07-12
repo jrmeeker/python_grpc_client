@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/ResultWrappers.proto";
+
+import "Protos/NR/RfmxNrModAccBwpResults.proto";
+
+message NrModAccCompCarrierResults {
+    DoubleResult ComponentCarrierFrequencyErrorMean = 1;
+    DoubleResult ComponentCarrierIQGainImbalanceMean = 2;
+    DoubleResult ComponentCarrierIQOriginOffsetMean = 3;
+    DoubleResult ComponentCarrierIQTimingSkewMean = 4;
+    DoubleResult ComponentCarrierQuadratureErrorMean = 5;
+    DoubleResult ComponentCarrierSlotFrequencyErrorMaximum = 6;
+    DoubleResult ComponentCarrierSlotIQOriginOffsetMaximum = 7;
+    DoubleResult ComponentCarrierSymbolClockErrorMean = 8;
+    DoubleResult ComponentCarrierTimeOffsetMean = 9;
+    Int32Result CompositePeakEvmBwpIndex = 10;
+    DoubleResult CompositePeakEvmMaximum = 11;
+    Int32Result CompositePeakEvmSlotIndex = 12;
+    Int32Result CompositePeakEvmSubcarrierIndex = 13;
+    Int32Result CompositePeakEvmSymbolIndex = 14;
+    DoubleResult CompositePeakMagnitudeErrorMaximum = 15;
+    DoubleResult CompositePeakPhaseErrorMaximum = 16;
+    DoubleResult CompositeRmsEvmMean = 17;
+    DoubleResult CompositeRmsMagnitudeErrorMean = 18;
+    DoubleResult CompositeRmsPhaseErrorMean = 19;
+    Int32Result DetectedCellID = 20;
+    DoubleResult InBandEmissionMargin = 21;
+    DoubleResult PbchDataPeakEvmMaximum = 22;
+    DoubleResult PbchDataRmsEvmMean = 23;
+    DoubleResult PbchDmrsPeakEvmMaximum = 24;
+    DoubleResult PbchDmrsRmsEvmMean = 25;
+    DoubleResult PssPeakEvmMaximum = 26;
+    DoubleResult PssRmsEvmMean = 27;
+    DoubleResult SchSymbolPowerMean = 28;
+    Int32Result SpectralFlatnessMarginSlotIndex = 29;
+    DoubleResult SpectralFlatnessRange1Maximum = 30;
+    Int32Result SpectralFlatnessRange1MaximumSubcarrierIndex = 31;
+    DoubleResult SpectralFlatnessRange1MaximumToRange1Minimum = 32;
+    DoubleResult SpectralFlatnessRange1MaximumToRange2Minimum = 33;
+    DoubleResult SpectralFlatnessRange1Minimum = 34;
+    Int32Result SpectralFlatnessRange1MinimumSubcarrierIndex = 35;
+    DoubleResult SpectralFlatnessRange2Maximum = 36;
+    Int32Result SpectralFlatnessRange2MaximumSubcarrierIndex = 37;
+    DoubleResult SpectralFlatnessRange2MaximumToRange1Minimum = 38;
+    DoubleResult SpectralFlatnessRange2MaximumToRange2Minimum = 39;
+    DoubleResult SpectralFlatnessRange2Minimum = 40;
+    Int32Result SpectralFlatnessRange2MinimumSubcarrierIndex = 41;
+    DoubleResult SssPeakEvmMaximum = 42;
+    DoubleResult SssRmsEvmMean = 43;
+    DoubleResult SubblockIQOriginOffsetMean = 44;
+
+    repeated NrModAccBwpResults ModAccBwpResults = 45;
+}

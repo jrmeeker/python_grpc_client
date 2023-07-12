@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>CalcPage</rootPath>
+    <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>python -m waferslim.server --syspath C:\Users\johnm\fitnesseTests LAPTOP-8MBMH76F 65345 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+    <exception>FitClient was killed</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>18543</totalRunTimeInMillis>
+</testResults>
+

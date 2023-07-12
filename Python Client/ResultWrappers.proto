@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "ResultWrapper";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+
+message DoubleResult {
+	bool request_result = 1;
+	google.protobuf.DoubleValue value = 2;
+}
+
+message FloatResult {
+	bool request_result = 1;
+	google.protobuf.FloatValue value = 2;
+}
+
+message Int32Result {
+	bool request_result = 1;
+	google.protobuf.Int32Value value = 2;
+}
+
+message BoolResult {
+	bool request_result = 1;
+	google.protobuf.BoolValue value = 2;
+}
+
+message StringResult {
+	bool request_result = 1;
+	google.protobuf.StringValue value = 2;
+}

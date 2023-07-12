@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxNRMXSemOffsetRbwFilterType {
+    FftBased_010ubzm = 0;
+    Gaussian_010kgft = 1;
+    Flat_010phxv = 2;
+    hrkmft = 500;
+}
+
+enum RFmxNRMXSemOffsetSideband {
+    Negative_010bzeh = 0;
+    Positive_010cudh = 1;
+    Both_010zxbx = 2;
+    xvawnh = 500;
+}
+
+message NrSemOffsets {
+    google.protobuf.DoubleValue OffsetAbsoluteLimitStart = 1;
+    google.protobuf.DoubleValue OffsetAbsoluteLimitStop = 2;
+    google.protobuf.Int32Value OffsetBandwidthIntegral = 3;
+    google.protobuf.DoubleValue OffsetRbwFilterBandwidth = 4;
+    RFmxNRMXSemOffsetRbwFilterType OffsetRbwFilterType = 5;
+    google.protobuf.DoubleValue OffsetRelativeLimitStart = 6;
+    google.protobuf.DoubleValue OffsetRelativeLimitStop = 7;
+    RFmxNRMXSemOffsetSideband OffsetSideband = 8;
+    google.protobuf.DoubleValue OffsetStartFrequency = 9;
+    google.protobuf.DoubleValue OffsetStopFrequency = 10;
+}

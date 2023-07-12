@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+import "RfmxNr.proto";
+import "RfmxPolicy.proto";
+import "RfmxNrResults.proto";
+import "RfsgNr.proto";
+import "Playback.proto";
+
+package multi_site_instr;
+
+// The rfmxnr service definition
+service OranRu {
+  rpc ConfigureRfmxNr (Nr) returns (RfmxNrReply);
+  rpc ConfigureAsyncRfmxNr (Nr) returns (RfmxNrReply);
+  rpc InitiateRfmxNr(Policy) returns (RfmxNrReply);
+  rpc LaunchRfmxNr(Nr) returns (RfmxNrReply);
+  rpc RequestRfmxNrResults(NrResults) returns (NrResults);
+  rpc InitiateRfsg(RfsgNr) returns (RfsgNrReply);
+  rpc AbortRfsg(RfsgNrReply) returns (RfsgNrReply);
+  rpc ReconfigForPlayback(Playback) returns (RfmxNrReply);
+  rpc StartRuTransmission(Nothing) returns (RfmxNrReply);
+  rpc StopRuTransmission(Nothing) returns (RfmxNrReply);
+}
+
+message Nothing
+{
+}
+message Status{
+	string Message = 1;
+}
+
+// The response message
+message RfmxNrReply {
+	string Message = 1;
+	string Error = 2;
+}
+
+// The response message
+message RfsgNrReply {
+	string Message = 1;
+	string Error = 2;
+}

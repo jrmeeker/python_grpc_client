@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+message NrAcpSubBlockCompCarriersResults {
+    DoubleResult AbsolutePower = 1;
+    DoubleResult RelativePower = 2;
+}

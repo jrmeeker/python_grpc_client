@@ -1,0 +1,802 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>CalcPage</rootPath>
+    <result>
+    <counts>
+      <right>26</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2023-07-10T11:23:08-07:00</date>
+    <runTimeInMillis>328</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+ &lt;br/&gt;&lt;span class="meta"&gt;variable defined: SLIM_VERSION=0.1&lt;/span&gt;
+ &lt;br/&gt;&lt;span class="meta"&gt;variable defined: COMMAND_PATTERN=python -m waferslim.server --syspath %p&lt;/span&gt;
+ &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;waferslim.examples.decision_table&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse_files.Grpc&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;Calc&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;A&lt;/td&gt;
+		&lt;td&gt;B&lt;/td&gt;
+		&lt;td&gt;multiply?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;15&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;25&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td colspan="4"&gt;&lt;span class="pass"&gt;Grpc&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;create_default_nr_request&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;Active Request is: NrRequest&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_double_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Instr.DownconverterFrequencyOffset&lt;/td&gt;
+		&lt;td&gt;5.0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;5.0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_enum_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Instr.LOLeakageAvoidanceEnabled&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;false &lt;span class="error"&gt;'int' object has no attribute 'value'&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.CellID&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;3&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_enum_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.FrequencyRange&lt;/td&gt;
+		&lt;td&gt;Range2_010eupi&lt;/td&gt;
+		&lt;td&gt;Range2 &lt;span class="error"&gt;'int' object has no attribute 'value'&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_double_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bandwidth&lt;/td&gt;
+		&lt;td&gt;100.0e6&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;100000000.0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_double_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.BandwidthPartSubcarrierSpacing&lt;/td&gt;
+		&lt;td&gt;120.0e3&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;120000.0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_double_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsPower&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0.0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_string_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschSlotAllocation&lt;/td&gt;
+		&lt;td&gt;"0-79"&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;"0-79"&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_string_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschSymbolAllocation&lt;/td&gt;
+		&lt;td&gt;"0-13"&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;"0-13"&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_string_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschPtrsAntennaPorts&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsNumberOfCdmGroups&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsTypeAPosition&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;3&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Rnti&lt;/td&gt;
+		&lt;td&gt;61&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;61&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschCluster.PuschResourceBlockOffset&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_int_property_by_name;&lt;/td&gt;
+		&lt;td&gt;SubBlock.CompCarriers.Bwp.User.Pusch.PuschCluster.PuschNumberOfResourceBlocks&lt;/td&gt;
+		&lt;td&gt;66&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;66&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Acp.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Chp.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Sem.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Obw.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;False&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;ModAcc.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Txp.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;set_bool_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Pvt.MeasurementEnabled&lt;/td&gt;
+		&lt;td&gt;True&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;true&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;Grpc&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;get_double_property_by_name;&lt;/td&gt;
+		&lt;td&gt;Instr.DownconverterFrequencyOffset&lt;/td&gt;
+		&lt;td&gt;NaN &lt;span class="error"&gt;Instr.DownconverterFrequencyOffset&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;Check&lt;/td&gt;
+		&lt;td&gt;get_enum_property_by_name;&lt;/td&gt;
+		&lt;td&gt;AcquisitionBandwidthOptimizationEnabled&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;500&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>CalcPage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='waferslim.examples.decision_table'}</instruction>
+        <slimResult>pass(waferslim.examples.decision_table)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>waferslim.examples.decision_table</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='fitnesse_files.Grpc'}</instruction>
+        <slimResult>pass(fitnesse_files.Grpc)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_1</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>fitnesse_files.Grpc</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='Calc', args=[]}</instruction>
+        <slimResult>pass(Calc)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Calc</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setA', args=[1]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_4</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_5', instruction='call', instanceName='decisionTable_1', methodName='setB', args=[2]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_5</instructionId>
+                    <col>1</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_7', instruction='call', instanceName='decisionTable_1', methodName='multiply', args=[]}</instruction>
+        <slimResult>pass(2)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_7</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>2</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_9', instruction='call', instanceName='decisionTable_1', methodName='setA', args=[1]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_9</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_10', instruction='call', instanceName='decisionTable_1', methodName='setB', args=[0]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_10</instructionId>
+                    <col>1</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='multiply', args=[]}</instruction>
+        <slimResult>pass(0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_12</instructionId>
+                    <col>2</col>
+                              <row>3</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_14', instruction='call', instanceName='decisionTable_1', methodName='setA', args=[3]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_14</instructionId>
+                    <col>0</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_15', instruction='call', instanceName='decisionTable_1', methodName='setB', args=[5]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_15</instructionId>
+                    <col>1</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_17', instruction='call', instanceName='decisionTable_1', methodName='multiply', args=[]}</instruction>
+        <slimResult>pass(15)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_17</instructionId>
+                    <col>2</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>15</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_19', instruction='call', instanceName='decisionTable_1', methodName='setA', args=[5]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_19</instructionId>
+                    <col>0</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_20', instruction='call', instanceName='decisionTable_1', methodName='setB', args=[5]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_20</instructionId>
+                    <col>1</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_22', instruction='call', instanceName='decisionTable_1', methodName='multiply', args=[]}</instruction>
+        <slimResult>pass(25)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_22</instructionId>
+                    <col>2</col>
+                              <row>5</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>25</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='make', instanceName='scriptTableActor', className='Grpc', args=[]}</instruction>
+        <slimResult>pass(Grpc)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Grpc</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='create_default_nr_request', args=[]}</instruction>
+        <slimResult>pass(Active Request is: NrRequest)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_1</instructionId>
+                    <col>2</col>
+                              <row>1</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>Active Request is: NrRequest</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_2', instruction='call', instanceName='scriptTableActor', methodName='set_double_property_by_name', args=[Instr.DownconverterFrequencyOffset, 5.0]}</instruction>
+        <slimResult>pass(5.0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_2</instructionId>
+                    <col>4</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>5.0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_3', instruction='call', instanceName='scriptTableActor', methodName='set_enum_property_by_name', args=[Instr.LOLeakageAvoidanceEnabled, false]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_3</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>'int' object has no attribute 'value'</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_4', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.CellID, 3]}</instruction>
+        <slimResult>pass(3)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_4</instructionId>
+                    <col>4</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>3</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_5', instruction='call', instanceName='scriptTableActor', methodName='set_enum_property_by_name', args=[SubBlock.FrequencyRange, Range2_010eupi]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_5</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>'int' object has no attribute 'value'</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_6', instruction='call', instanceName='scriptTableActor', methodName='set_double_property_by_name', args=[SubBlock.CompCarriers.Bandwidth, 100.0e6]}</instruction>
+        <slimResult>pass(100000000.0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_6</instructionId>
+                    <col>4</col>
+                              <row>6</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>100000000.0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_7', instruction='call', instanceName='scriptTableActor', methodName='set_double_property_by_name', args=[SubBlock.CompCarriers.Bwp.BandwidthPartSubcarrierSpacing, 120.0e3]}</instruction>
+        <slimResult>pass(120000.0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_7</instructionId>
+                    <col>4</col>
+                              <row>7</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>120000.0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_8', instruction='call', instanceName='scriptTableActor', methodName='set_double_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsPower, 0]}</instruction>
+        <slimResult>pass(0.0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_8</instructionId>
+                    <col>4</col>
+                              <row>8</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>0.0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_9', instruction='call', instanceName='scriptTableActor', methodName='set_string_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschSlotAllocation, "0-79"]}</instruction>
+        <slimResult>pass("0-79")</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_9</instructionId>
+                    <col>4</col>
+                              <row>9</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>"0-79"</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_10', instruction='call', instanceName='scriptTableActor', methodName='set_string_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschSymbolAllocation, "0-13"]}</instruction>
+        <slimResult>pass("0-13")</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_10</instructionId>
+                    <col>4</col>
+                              <row>10</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>"0-13"</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_11', instruction='call', instanceName='scriptTableActor', methodName='set_string_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschPtrsAntennaPorts, 0]}</instruction>
+        <slimResult>pass(0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_11</instructionId>
+                    <col>4</col>
+                              <row>11</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_12', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsNumberOfCdmGroups, 1]}</instruction>
+        <slimResult>pass(1)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_12</instructionId>
+                    <col>4</col>
+                              <row>12</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>1</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_13', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschDmrsTypeAPosition, 3]}</instruction>
+        <slimResult>pass(3)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_13</instructionId>
+                    <col>4</col>
+                              <row>13</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>3</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_14', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Rnti, 61]}</instruction>
+        <slimResult>pass(61)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_14</instructionId>
+                    <col>4</col>
+                              <row>14</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>61</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_15', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschCluster.PuschResourceBlockOffset, 0]}</instruction>
+        <slimResult>pass(0)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_15</instructionId>
+                    <col>4</col>
+                              <row>15</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>0</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_16', instruction='call', instanceName='scriptTableActor', methodName='set_int_property_by_name', args=[SubBlock.CompCarriers.Bwp.User.Pusch.PuschCluster.PuschNumberOfResourceBlocks, 66]}</instruction>
+        <slimResult>pass(66)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_16</instructionId>
+                    <col>4</col>
+                              <row>16</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>66</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_17', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Acp.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_17</instructionId>
+                    <col>4</col>
+                              <row>17</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_18', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Chp.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_18</instructionId>
+                    <col>4</col>
+                              <row>18</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_19', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Sem.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_19</instructionId>
+                    <col>4</col>
+                              <row>19</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_20', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Obw.MeasurementEnabled, False]}</instruction>
+        <slimResult>pass(false)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_20</instructionId>
+                    <col>4</col>
+                              <row>20</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>false</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_21', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[ModAcc.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_21</instructionId>
+                    <col>4</col>
+                              <row>21</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_22', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Txp.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_22</instructionId>
+                    <col>4</col>
+                              <row>22</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_23', instruction='call', instanceName='scriptTableActor', methodName='set_bool_property_by_name', args=[Pvt.MeasurementEnabled, True]}</instruction>
+        <slimResult>pass(true)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_23</instructionId>
+                    <col>4</col>
+                              <row>23</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>true</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_0', instruction='make', instanceName='scriptTableActor', className='Grpc', args=[]}</instruction>
+        <slimResult>pass(Grpc)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_3_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Grpc</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_1', instruction='call', instanceName='scriptTableActor', methodName='get_double_property_by_name', args=[Instr.DownconverterFrequencyOffset]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_3_1</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>Instr.DownconverterFrequencyOffset</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_2', instruction='call', instanceName='scriptTableActor', methodName='get_enum_property_by_name', args=[AcquisitionBandwidthOptimizationEnabled]}</instruction>
+        <slimResult>pass(500)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_3_2</instructionId>
+                    <col>3</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>500</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>python -m waferslim.server --syspath defaultPath 8087</command>
+    <exitCode>0</exitCode>
+    <stdOut>Reset function
+Execute function
+Reset function
+Execute function
+Reset function
+Execute function
+Reset function
+Execute function
+</stdOut>
+    <stdErr>WARNING:Instructions:Error executing Call scriptTable_2_3: ['scriptTableActor', 'set_enum_property_by_name', 'Instr.LOLeakageAvoidanceEnabled', 'false']:
+Traceback (most recent call last):
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\execution.py", line 92, in execute
+    instruction.execute(execution_context, results)
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 82, in execute
+    result, is_ok = self._invoke(execution_context, results, self._params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 107, in _invoke
+    return self._result(execution_context, target, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 121, in _result
+    result = target(*args)
+             ^^^^^^^^^^^^^
+  File "C:\py_grpc_fitnesse\Python Client\fitnesse_files\Grpc.py", line 143, in set_enum_property_by_name
+    p.value = 0
+    ^^^^^^^
+AttributeError: 'int' object has no attribute 'value'
+WARNING:Instructions:Error executing Call scriptTable_2_5: ['scriptTableActor', 'set_enum_property_by_name', 'SubBlock.FrequencyRange', 'Range2_010eupi']:
+Traceback (most recent call last):
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\execution.py", line 92, in execute
+    instruction.execute(execution_context, results)
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 82, in execute
+    result, is_ok = self._invoke(execution_context, results, self._params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 107, in _invoke
+    return self._result(execution_context, target, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 121, in _result
+    result = target(*args)
+             ^^^^^^^^^^^^^
+  File "C:\py_grpc_fitnesse\Python Client\fitnesse_files\Grpc.py", line 143, in set_enum_property_by_name
+    p.value = 0
+    ^^^^^^^
+AttributeError: 'int' object has no attribute 'value'
+WARNING:Instructions:Error executing Call scriptTable_3_1: ['scriptTableActor', 'get_double_property_by_name', 'Instr.DownconverterFrequencyOffset']:
+Traceback (most recent call last):
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\execution.py", line 92, in execute
+    instruction.execute(execution_context, results)
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 82, in execute
+    result, is_ok = self._invoke(execution_context, results, self._params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 107, in _invoke
+    return self._result(execution_context, target, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\johnm\AppData\Local\Programs\Python\Python311\Lib\site-packages\waferslim-1.0.2-py3.11.egg\waferslim\instructions.py", line 121, in _result
+    result = target(*args)
+             ^^^^^^^^^^^^^
+  File "C:\py_grpc_fitnesse\Python Client\fitnesse_files\Grpc.py", line 161, in get_double_property_by_name
+    att = getattr(self.req, prop)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: Instr.DownconverterFrequencyOffset
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1077</totalRunTimeInMillis>
+</testResults>
+

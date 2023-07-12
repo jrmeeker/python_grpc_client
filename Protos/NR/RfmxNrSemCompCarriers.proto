@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+message NrSemCompCarriers {
+    google.protobuf.DoubleValue IntegrationBandwidth = 1;
+    google.protobuf.DoubleValue RatedOutputPower = 2;
+}

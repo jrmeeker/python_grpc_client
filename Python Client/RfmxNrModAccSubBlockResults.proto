@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxNrModAccCompCarrierResults.proto";
+
+message NrModAccSubBlockResults {
+    DoubleResult SubblockInBandEmissionMargin = 1;
+    Int32Result SubblockLOComponentCarrierIndex = 2;
+    Int32Result SubblockLOSubcarrierIndex = 3;
+
+    repeated NrModAccCompCarrierResults ModAccCompCarrierResults = 4;
+}

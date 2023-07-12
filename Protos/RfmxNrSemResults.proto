@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxNrSemSubBlockResults.proto";
+
+enum RsmxNRMXSemMeasurementStatus {
+    Fail_010vxkb = 0;
+    Pass_010whld = 1;
+    RequestResult_010rgnt = 400;
+    ymcgjz = 500;
+}
+
+message NrSemResults {
+    RsmxNRMXSemMeasurementStatus MeasurementStatus = 1;
+    DoubleResult TotalAggregatedPower = 2;
+
+    repeated NrSemSubBlockResults SemSubBlockResults = 3;
+}

@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/RfmxPolicy.proto";
+import "Protos/SpecAn/RfmxSpecAnAcp.proto";
+import "Protos/SpecAn/RfmxSpecAnSpectrum.proto";
+import "Protos/SpecAn/RfmxSpecAnCcdf.proto";
+import "Protos/SpecAn/RfmxSpecAnIq.proto";
+
+enum RFmxSpecAnMXDigitalEdgeTriggerEdge {
+    Rising_010evyk = 0;
+    Falling_010ivao = 1;
+    cybrtf = 500;
+}
+
+enum RFmxSpecAnMXIQPowerEdgeTriggerLevelType {
+    Relative_010crtl = 0;
+    Absolute_010dxsg = 1;
+    eryikw = 500;
+}
+
+enum RFmxSpecAnMXIQPowerEdgeTriggerSlope {
+    Rising_010vxuo = 0;
+    Falling_010gwfn = 1;
+    jxpkmi = 500;
+}
+
+enum RFmxSpecAnMXLimitedConfigurationChange {
+    Disabled_010dshy = 0;
+    NoChange_010qxyl = 1;
+    Frequency_010bdib = 2;
+    ReferenceLevel_010ryrg = 3;
+    FrequencyAndReferenceLevel_010lzle = 4;
+    SelectedPortsFrequencyAndReferenceLevel_010teen = 5;
+    lxaphv = 500;
+}
+
+enum RFmxSpecAnMXTriggerMinimumQuietTimeMode {
+    Manual_010vskj = 0;
+    Auto_010cmka = 1;
+    smxjvr = 500;
+}
+
+enum RFmxSpecAnMXTriggerType {
+    None_010ffeh = 0;
+    DigitalEdge_010wdlp = 1;
+    IQPowerEdge_010yipy = 2;
+    Software_010ouns = 3;
+    wjdghp = 500;
+}
+
+message SpecAn {
+    google.protobuf.DoubleValue AutoLevelInitialReferenceLevel = 1;
+    google.protobuf.DoubleValue CenterFrequency = 2;
+    RFmxSpecAnMXDigitalEdgeTriggerEdge DigitalEdgeTriggerEdge = 3;
+    google.protobuf.StringValue DigitalEdgeTriggerSource = 4;
+    google.protobuf.DoubleValue ExternalAttenuation = 5;
+    google.protobuf.DoubleValue IQPowerEdgeTriggerLevel = 6;
+    RFmxSpecAnMXIQPowerEdgeTriggerLevelType IQPowerEdgeTriggerLevelType = 7;
+    RFmxSpecAnMXIQPowerEdgeTriggerSlope IQPowerEdgeTriggerSlope = 8;
+    google.protobuf.StringValue IQPowerEdgeTriggerSource = 9;
+    RFmxSpecAnMXLimitedConfigurationChange LimitedConfigurationChange = 10;
+    google.protobuf.DoubleValue ReferenceLevel = 11;
+    google.protobuf.DoubleValue ReferenceLevelHeadroom = 12;
+    google.protobuf.DoubleValue ResultFetchTimeout = 13;
+    google.protobuf.StringValue SelectedPorts = 14;
+    google.protobuf.DoubleValue TriggerDelay = 15;
+    google.protobuf.DoubleValue TriggerMinimumQuietTimeDuration = 16;
+    RFmxSpecAnMXTriggerMinimumQuietTimeMode TriggerMinimumQuietTimeMode = 17;
+    RFmxSpecAnMXTriggerType TriggerType = 18;
+
+    Policy Policy = 19;
+    SpecAnAcp SpecAnAcp = 20;
+    SpecAnSpectrum SpecAnSpectrum = 21;
+    SpecAnCcdf SpecAnCcdf = 22;
+    SpecAnIq SpecAnIq = 23;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "RfmxNrAcpSubBlockOffset.proto";
+import "RfmxNrAcpSubBlockCompCarrier.proto";
+
+message NrAcpSubBlock {
+    google.protobuf.Int32Value NumberOfEndcOffsets = 1;
+    google.protobuf.Int32Value NumberOfEutraOffsets = 2;
+    google.protobuf.Int32Value NumberOfNROffsets = 3;
+    google.protobuf.Int32Value NumberOfOffsets = 4;
+    google.protobuf.Int32Value NumberOfUtraOffsets = 5;
+    google.protobuf.DoubleValue OffsetChannelSpacingAdjustment = 6;
+    google.protobuf.DoubleValue SubblockIntegrationBandwidth = 7;
+    google.protobuf.DoubleValue SubblockOffset = 8;
+
+    repeated NrAcpSubBlockOffset AcpSubBlockOffset = 9;
+    repeated NrAcpSubBlockCompCarrier AcpSubBlockCompCarrier = 10;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxNrModAccUserResults.proto";
+
+message NrModAccBwpResults {
+    DoubleResult Pdsch1024QamRmsEvmMean = 1;
+    DoubleResult Pdsch16QamRmsEvmMean = 2;
+    DoubleResult Pdsch256QamRmsEvmMean = 3;
+    DoubleResult Pdsch64QamRmsEvmMean = 4;
+    DoubleResult Pdsch8PskRmsEvmMean = 5;
+    DoubleResult PdschQpskRmsEvmMean = 6;
+
+    repeated NrModAccUserResults ModAccUserResults = 7;
+}

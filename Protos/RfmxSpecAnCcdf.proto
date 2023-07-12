@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxSpecAnMXCcdfRbwFilterType {
+    glaofv = 0;
+    Gaussian_010pfab = 1;
+    Flat_010giyp = 2;
+    None_010mjzy = 5;
+    Rrc_010knjt = 6;
+    ncwwuj = 500;
+}
+
+enum RFmxSpecAnMXCcdfThresholdEnabled {
+    False_010zqrz = 0;
+    True_010aaiy = 1;
+    muhbxz = 500;
+}
+
+enum RFmxSpecAnMXCcdfThresholdType {
+    Relative_010qlzb = 0;
+    Absolute_010ijkp = 1;
+    lvapsn = 500;
+}
+
+message SpecAnCcdf {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    google.protobuf.BoolValue MeasurementEnabled = 2;
+    google.protobuf.DoubleValue MeasurementInterval = 3;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 4;
+    google.protobuf.Int32Value NumberOfRecords = 5;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 6;
+    google.protobuf.DoubleValue RbwFilterRrcAlpha = 7;
+    RFmxSpecAnMXCcdfRbwFilterType RbwFilterType = 8;
+    RFmxSpecAnMXCcdfThresholdEnabled ThresholdEnabled = 9;
+    google.protobuf.DoubleValue ThresholdLevel = 10;
+    RFmxSpecAnMXCcdfThresholdType ThresholdType = 11;
+}

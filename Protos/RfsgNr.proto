@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RfsgGenerationMode
+{
+    False_GenerationMode = 0;
+    ContinuousWave = 1000;
+    ARBWAVEFORM = 1001;
+    Script = 1002;
+}
+
+message RfsgNr { 
+    google.protobuf.BoolValue OutPutEnabled = 1;
+    google.protobuf.BoolValue State = 2;
+    google.protobuf.StringValue RefSource = 3;
+    google.protobuf.DoubleValue Frequency = 4;
+    google.protobuf.DoubleValue ExtLoss = 5;
+    RfsgGenerationMode GenerationMode = 6;
+    google.protobuf.StringValue WaveformRepeatCount = 7;
+    google.protobuf.StringValue WaveformRepeatMode = 8;
+    google.protobuf.DoubleValue PowerLeveldBm = 9;
+    google.protobuf.DoubleValue UpConverterFreqOffset = 10;
+    google.protobuf.StringValue SelectedPort = 11;
+    google.protobuf.StringValue SelectedWaveform = 12;
+    google.protobuf.StringValue WaveformToLoad = 13;
+}
+

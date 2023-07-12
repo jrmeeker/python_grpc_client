@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrSemSubBlock.proto";
+
+enum RFmxNRMXSemAmplitudeCorrectionType {
+    RFCenterFrequency_010qqmp = 0;
+    SpectrumFrequencyBin_010qmrd = 1;
+    wlgmcc = 500;
+}
+
+enum RFmxNRMXSemAveragingEnabled {
+    False_010egbj = 0;
+    True_010kmzf = 1;
+    ichirr = 500;
+}
+
+enum RFmxNRMXSemAveragingType {
+    Rms_010jcul = 0;
+    Log_010ddvp = 1;
+    Scalar_010glir = 2;
+    Maximum_010qyyr = 3;
+    Minimum_010bmuz = 4;
+    srtqmb = 500;
+}
+
+enum RFmxNRMXSemDownlinkMaskType {
+    Standard_010hlik = 0;
+    Custom_010iivz = 2;
+    utruiy = 500;
+}
+
+enum RFmxNRMXSemFftWindow {
+    None_010gpap = 0;
+    FlatTop_010aswa = 1;
+    Hanning_010gqau = 2;
+    Hamming_010nszs = 3;
+    Gaussian_010iezc = 4;
+    Blackman_010vkgw = 5;
+    BlackmanHarris_010dawr = 6;
+    KaiserBessel_010eeah = 7;
+    dvsdqd = 500;
+}
+
+enum RFmxNRMXSemOffsetLimitFailMask {
+    AbsAndRel_010pufg = 0;
+    AbsOrRel_010erjn = 1;
+    Absolute_010ucab = 2;
+    Relative_010lmvg = 3;
+    dwidma = 500;
+}
+
+enum RFmxNRMXSemSweepTimeAuto {
+    False_010vewc = 0;
+    True_010ptqs = 1;
+    zwbeof = 500;
+}
+
+enum RFmxNRMXSemUplinkMaskType {
+    General_010xofp = 0;
+    NS35_010nqgu = 1;
+    Custom_010rcsn = 2;
+    NS03_010lxsv = 3;
+    NS04_010unrp = 4;
+    NS06_010yakb = 5;
+    NS21_010bpwb = 6;
+    NS27_010ddzg = 7;
+    NS07_010yqjo = 8;
+    rtqwtb = 500;
+}
+
+message NrSem {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxNRMXSemAmplitudeCorrectionType AmplitudeCorrectionType = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxNRMXSemAveragingEnabled AveragingEnabled = 4;
+    RFmxNRMXSemAveragingType AveragingType = 5;
+    google.protobuf.DoubleValue DeltaFMaximum = 6;
+    RFmxNRMXSemDownlinkMaskType DownlinkMaskType = 7;
+    RFmxNRMXSemFftWindow FftWindow = 8;
+    google.protobuf.BoolValue MeasurementEnabled = 9;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 10;
+    RFmxNRMXSemOffsetLimitFailMask OffsetLimitFailMask = 11;
+    RFmxNRMXSemSweepTimeAuto SweepTimeAuto = 12;
+    google.protobuf.DoubleValue SweepTimeInterval = 13;
+    RFmxNRMXSemUplinkMaskType UplinkMaskType = 14;
+
+    repeated NrSemSubBlock SemSubBlock = 15;
+}

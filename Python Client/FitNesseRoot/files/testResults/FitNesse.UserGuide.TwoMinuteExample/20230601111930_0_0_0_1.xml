@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>FitNesse.UserGuide.TwoMinuteExample</rootPath>
+    <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp fitnesse-standalone.jar;classes;lib/*.jar fitnesse.slim.SlimService 8085</command>
+    <exitCode>98</exitCode>
+    <stdOut>Exiting as exception occured: Address already in use: NET_Bind
+</stdOut>
+    <stdErr>Can not bind to port 8085. Aborting.
+java.net.BindException: Address already in use: NET_Bind
+	at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+	at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:436)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+	at java.base/java.net.ServerSocket.&lt;init&gt;(ServerSocket.java:257)
+	at java.base/java.net.ServerSocket.&lt;init&gt;(ServerSocket.java:149)
+	at fitnesse.socketservice.SocketFactory.createServerSocket(SocketFactory.java:33)
+	at fitnesse.slim.SlimService.&lt;init&gt;(SlimService.java:102)
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:75)
+	at fitnesse.slim.SlimService.main(SlimService.java:56)
+java.net.BindException: Address already in use: NET_Bind
+	at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+	at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:436)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+	at java.base/java.net.ServerSocket.&lt;init&gt;(ServerSocket.java:257)
+	at java.base/java.net.ServerSocket.&lt;init&gt;(ServerSocket.java:149)
+	at fitnesse.socketservice.SocketFactory.createServerSocket(SocketFactory.java:33)
+	at fitnesse.slim.SlimService.&lt;init&gt;(SlimService.java:102)
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:75)
+	at fitnesse.slim.SlimService.main(SlimService.java:56)
+</stdErr>
+    <exception>Got invalid slim header from client. Read the following: HTTP/1.1 408 Request Time-out</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>10118</totalRunTimeInMillis>
+</testResults>
+

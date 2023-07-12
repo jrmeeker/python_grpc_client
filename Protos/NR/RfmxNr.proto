@@ -1,0 +1,201 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/RfmxPolicy.proto";
+import "Protos/Instr/RfmxInst.proto";
+import "Protos/NR/RfmxNrSubBlock.proto";
+import "Protos/NR/RfmxNrChp.proto";
+import "Protos/NR/RfmxNrAcp.proto";
+import "Protos/NR/RfmxNrModAcc.proto";
+import "Protos/NR/RfmxNrObw.proto";
+import "Protos/NR/RfmxNrSem.proto";
+import "Protos/NR/RfmxNrTxp.proto";
+import "Protos/NR/RfmxNrPvt.proto";
+
+enum RFmxNRMXAcquisitionBandwidthOptimizationEnabled {
+    False_010qymm = 0;
+    True_010fwzb = 1;
+    rqciko = 500;
+}
+
+enum RFmxNRMXAutoCellIDDetectionEnabled {
+    False_010lnpq = 0;
+    True_010drls = 1;
+    rplbuq = 500;
+}
+
+enum RFmxNRMXAutoIncrementCellIDEnabled {
+    False_010teth = 0;
+    True_010nmat = 1;
+    nvxfaa = 500;
+}
+
+enum RFmxNRMXAutoResourceBlockDetectionEnabled {
+    False_010tdxa = 0;
+    True_010cvbt = 1;
+    dmltox = 500;
+}
+
+enum RFmxNRMXDigitalEdgeTriggerEdge {
+    Rising_010gxad = 0;
+    Falling_010ciin = 1;
+    xuvxnr = 500;
+}
+
+enum RFmxNRMXDownlinkChannelConfigurationMode {
+    ztsxql = 0;
+    UserDefined_010zorl = 1;
+    TestModel_010zyoz = 2;
+    agvtyc = 500;
+}
+
+enum RFmxNRMXDownlinkTestModelCellIDMode {
+    Auto_010nqvt = 0;
+    Manual_010drrf = 1;
+    fcffik = 500;
+}
+
+enum RFmxNRMXgNodeBCategory {
+    WideAreaBaseStationCategoryA_010tktn = 0;
+    WideAreaBaseStationCategoryBOption1_010cdys = 1;
+    WideAreaBaseStationCategoryBOption2_010fped = 2;
+    LocalAreaBaseStation_010timr = 3;
+    MediumRangeBaseStation_010zbzl = 5;
+    FR2CategoryA_010ejxy = 6;
+    FR2CategoryB_010uztt = 7;
+    ipfuqe = 500;
+}
+
+enum RFmxNRMXgNodeBType {
+    Type1C_010gqmh = 0;
+    Type1H_010rvev = 1;
+    Type1O_010lgpz = 2;
+    Type2O_010xjso = 3;
+    ddfxfk = 500;
+}
+
+enum RFmxNRMXGridSizeMode {
+    Manual_010mutd = 0;
+    Auto_010jejq = 1;
+    jknpcw = 500;
+}
+
+enum RFmxNRMXIQPowerEdgeTriggerLevelType {
+    Relative_010eskd = 0;
+    Absolute_010gjyr = 1;
+    jvbkau = 500;
+}
+
+enum RFmxNRMXIQPowerEdgeTriggerSlope {
+    Rising_010lcot = 0;
+    Falling_010zwer = 1;
+    onlzmu = 500;
+}
+
+enum RFmxNRMXLimitedConfigurationChange {
+    Disabled_010xfli = 0;
+    NoChange_010hwjl = 1;
+    Frequency_010scqw = 2;
+    ReferenceLevel_010lvly = 3;
+    FrequencyAndReferenceLevel_010czeo = 4;
+    SelectedPortsFrequencyAndReferenceLevel_010egvu = 5;
+    qfsmdx = 500;
+}
+
+enum RFmxNRMXLinkDirection {
+    Downlink_010shxd = 0;
+    Uplink_010tejs = 1;
+    cdlakm = 500;
+}
+
+enum RFmxNRMXPhaseCompensation {
+    Disabled_010cckj = 0;
+    Auto_010gqlm = 1;
+    UserDefined_010vxqq = 2;
+    jrsbew = 500;
+}
+
+enum RFmxNRMXPiBy2BpskPowerBoostEnabled {
+    False_010hvjj = 0;
+    True_010zhbh = 1;
+    ojwacd = 500;
+}
+
+enum RFmxNRMXReferenceGridAlignmentMode {
+    Manual_010wjrn = 0;
+    Auto_010vjgn = 1;
+    lfmznc = 500;
+}
+
+enum RFmxNRMXTransmitterArchitecture {
+    LOPerComponentCarrier_010urzb = 0;
+    LOPerSubblock_010zptp = 1;
+    ctddhy = 500;
+}
+
+enum RFmxNRMXTriggerMinimumQuietTimeMode {
+    Manual_010bbqu = 0;
+    Auto_010umua = 1;
+    afgvpt = 500;
+}
+
+enum RFmxNRMXTriggerType {
+    None_010jewa = 0;
+    DigitalEdge_010uymx = 1;
+    IQPowerEdge_010juan = 2;
+    Software_010khgx = 3;
+    krbhmk = 500;
+}
+
+message Nr {
+    RFmxNRMXAcquisitionBandwidthOptimizationEnabled AcquisitionBandwidthOptimizationEnabled = 1;
+    RFmxNRMXAutoCellIDDetectionEnabled AutoCellIDDetectionEnabled = 2;
+    RFmxNRMXAutoIncrementCellIDEnabled AutoIncrementCellIDEnabled = 3;
+    RFmxNRMXAutoResourceBlockDetectionEnabled AutoResourceBlockDetectionEnabled = 4;
+    google.protobuf.DoubleValue CenterFrequency = 5;
+    RFmxNRMXDigitalEdgeTriggerEdge DigitalEdgeTriggerEdge = 6;
+    google.protobuf.StringValue DigitalEdgeTriggerSource = 7;
+    RFmxNRMXDownlinkChannelConfigurationMode DownlinkChannelConfigurationMode = 8;
+    RFmxNRMXDownlinkTestModelCellIDMode DownlinkTestModelCellIDMode = 9;
+    google.protobuf.DoubleValue ExternalAttenuation = 10;
+    RFmxNRMXgNodeBCategory gNodeBCategory = 11;
+    RFmxNRMXgNodeBType gNodeBType = 12;
+    RFmxNRMXGridSizeMode GridSizeMode = 13;
+    google.protobuf.DoubleValue IQPowerEdgeTriggerLevel = 14;
+    RFmxNRMXIQPowerEdgeTriggerLevelType IQPowerEdgeTriggerLevelType = 15;
+    RFmxNRMXIQPowerEdgeTriggerSlope IQPowerEdgeTriggerSlope = 16;
+    google.protobuf.StringValue IQPowerEdgeTriggerSource = 17;
+    RFmxNRMXLimitedConfigurationChange LimitedConfigurationChange = 18;
+    RFmxNRMXLinkDirection LinkDirection = 19;
+    google.protobuf.Int32Value NumberOfSubblocks = 20;
+    RFmxNRMXPhaseCompensation PhaseCompensation = 21;
+    RFmxNRMXPiBy2BpskPowerBoostEnabled PiBy2BpskPowerBoostEnabled = 22;
+    google.protobuf.Int32Value PowerClass = 23;
+    RFmxNRMXReferenceGridAlignmentMode ReferenceGridAlignmentMode = 24;
+    google.protobuf.DoubleValue ReferenceLevel = 25;
+    google.protobuf.DoubleValue ReferenceLevelHeadroom = 26;
+    google.protobuf.DoubleValue ResultFetchTimeout = 27;
+    google.protobuf.StringValue SelectedPorts = 28;
+    google.protobuf.Int32Value TransmitAntennaToAnalyze = 29;
+    RFmxNRMXTransmitterArchitecture TransmitterArchitecture = 30;
+    google.protobuf.DoubleValue TriggerDelay = 31;
+    google.protobuf.DoubleValue TriggerMinimumQuietTimeDuration = 32;
+    RFmxNRMXTriggerMinimumQuietTimeMode TriggerMinimumQuietTimeMode = 33;
+    RFmxNRMXTriggerType TriggerType = 34;
+
+    Policy Policy = 35;
+    Inst Instr = 36;
+    repeated NrSubBlock SubBlock = 37;
+    NrChp Chp = 38;
+    NrAcp Acp = 39;
+    NrModAcc ModAcc = 40;
+    NrObw Obw = 41;
+    NrSem Sem = 42;
+    NrTxp Txp = 43;
+    NrPvt Pvt = 44;
+}

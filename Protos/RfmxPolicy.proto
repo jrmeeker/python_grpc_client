@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+
+
+message Policy {
+    google.protobuf.StringValue Signal = 1;
+    google.protobuf.StringValue ResultName = 2;
+    google.protobuf.Int32Value TimeoutMs = 3;
+    google.protobuf.StringValue RfwsFile = 4;
+    string Error = 5;
+}

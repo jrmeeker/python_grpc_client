@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxPolicy.proto";
+import "RfmxNrChpResults.proto";
+import "RfmxNrAcpResults.proto";
+import "RfmxNrModAccResults.proto";
+import "RfmxNrObwResults.proto";
+import "RfmxNrSemResults.proto";
+import "RfmxNrTxpResults.proto";
+import "RfmxNrPvtResults.proto";
+
+message NrResults {
+
+    Policy Policy = 1;
+    NrChpResults ChpResults = 2;
+    NrAcpResults AcpResults = 3;
+    NrModAccResults ModAccResults = 4;
+    NrObwResults ObwResults = 5;
+    NrSemResults SemResults = 6;
+    NrTxpResults TxpResults = 7;
+    NrPvtResults PvtResults = 8;
+}

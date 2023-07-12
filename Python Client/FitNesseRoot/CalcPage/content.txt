@@ -1,0 +1,82 @@
+!define TEST_SYSTEM {slim} 
+!define SLIM_VERSION {0.1} 
+#!path fitnesse_files\
+!define COMMAND_PATTERN {python -m waferslim.server --syspath %p} 
+
+
+|import                           |
+|waferslim.examples.decision_table|
+|fitnesse_files.Grpc              |
+
+|Calc         |
+|A|B|multiply?|
+|1|2|2        |
+|1|0|0        |
+|3|5|15       |
+|5|5|25       |
+
+#|Grpc                  |
+#|reply   |viewReply?   |
+#|whatever|default reply|
+
+|Script|Grpc                                                                                                                                                                 |
+|Check |create_default_nr_request   |!-Active Request is: NrRequest-!                                                                                                        |
+|Check |set_double_property_by_name;|!-Instr.DownconverterFrequencyOffset-!                                                             |5.0                     |5.0        |
+|Check |set_enum_property_by_name;  |!-Instr.LOLeakageAvoidanceEnabled-!                                                                |False_010mlvg           |0          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].DownlinkTestModelDuplexScheme-!                                      |Tdd_010zect             |1          |
+|Check |set_enum_property_by_name;  |!-ModAcc.CommonClockSourceEnabled-!                                                                |!-False-!               |0          |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].CellID-!                                                             |3                       |3          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].FrequencyRange-!                                                                     |!-Range2_010eupi-!      |1          |
+|Check |set_double_property_by_name;|!-SubBlock[0].CompCarriers[0].Bandwidth-!                                                          |100.0e6                 |100000000.0|
+|Check |set_double_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].BandwidthPartSubcarrierSpacing-!                              |120.0e3                 |120000.0   |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschModulationType-!                        |!-Qam16_010oqhm-!       |2          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschTransformPrecodingEnabled-!             |!-False-!               |0          |
+|Check |set_double_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsPower-!                             |0                       |0.0        |
+|Check |set_string_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschSlotAllocation-!                        |!-"0-79"-!              |!-"0-79"-! |
+|Check |set_string_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschSymbolAllocation-!                      |!-"0-13"-!              |!-"0-13"-! |
+|Check |set_double_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsPower-!                             |0                       |0.0        |
+|Check |set_string_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschPtrsAntennaPorts-!                      |0                       |0          |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsNumberOfCdmGroups-!                 |1                       |1          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsConfigurationType-!                 |Type1_010ytts           |0          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschMappingType-!                           |TypeA_010nlje           |0          |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsTypeAPosition-!                     |3                       |3          |
+|Check |set_enum_property_by_name;  |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschDmrsDuration-!                          |!-SingleSymbol_010dhrn-!|1          |
+|Check |set_string_property_by_name;|!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschPtrsAntennaPorts-!                      |0                       |0          |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Rnti-!                                                |61                      |61         |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschCluster[0].PuschResourceBlockOffset-!   |0                       |0          |
+|Check |set_int_property_by_name;   |!-SubBlock[0].CompCarriers[0].Bwp[0].User[0].Pusch[0].PuschCluster[0].PuschNumberOfResourceBlocks-!|66                      |66         |
+|Check |set_enum_property_by_name;  |!-LinkDirection-!                                                                                  |Uplink_010tejs          |1          |
+|Check |set_bool_property_by_name;  |!-Acp.MeasurementEnabled-!                                                                         |True                    |true       |
+|Check |set_bool_property_by_name;  |!-Chp.MeasurementEnabled-!                                                                         |True                    |true       |
+|Check |set_bool_property_by_name;  |!-Sem.MeasurementEnabled-!                                                                         |True                    |true       |
+|Check |set_bool_property_by_name;  |!-Obw.MeasurementEnabled-!                                                                         |False                   |false      |
+|Check |set_bool_property_by_name;  |!-ModAcc.MeasurementEnabled-!                                                                      |True                    |true       |
+|Check |set_bool_property_by_name;  |!-Txp.MeasurementEnabled-!                                                                         |True                    |true       |
+|Check |set_bool_property_by_name;  |!-Pvt.MeasurementEnabled-!                                                                         |True                    |true       |
+
+|Script|Grpc                    |
+|Check |get_request_json_string||
+
+|Script|Grpc                            |
+|Check |launch_rfmx_nr|Message:"ConfiguredSignal"|
+
+|Script|Grpc                                                                                                                                                                           |
+|Check |create_default_nr_result_request|!-Active Request is: NrResults-!                                                                                                                                   |
+|Check |set_bool_property_by_name;  |!-AcpResults.AcpSubBlockResults[0].SubblockPower.RequestResult-!                                                               |True             |True             |
+|Check |set_bool_property_by_name;  |!-AcpResults.AcpSubBlockResults[0].AcpSubBlockOffsetResults[0].UpperOffsetAbsolutePower.RequestResult-!                        |True             |True             |
+|Check |set_bool_property_by_name;   |!-ChpResults.TotalAggregatedPower.RequestResult-!                                                                              |True             |True             |
+|Check |set_bool_property_by_name;  |!-ChpResults.ChpSubBlockResults[0].ChpCompCarrierResults[0].RelativePower.RequestResult-!                                      |True             |True             |
+|Check |set_bool_property_by_name;   |!-ChpResults.ChpSubBlockResults[0].SubblockPower.RequestResult-!                                                               |True             |True             |
+|Check |set_bool_property_by_name;   |!-ObwResults.ObwSubBlockResults[0].StartFrequency.RequestResult-!                                                              |True             |True             |
+|Check |set_bool_property_by_name;   |!-ObwResults.ObwSubBlockResults[0].OccupiedBandwidth.RequestResult-!                                                           |True             |True             |
+|Check |set_enum_property_by_name;   |!-SemResults.MeasurementStatus-!                                                                                               |!-RequestResult-!|!-RequestResult-!|
+|Check |set_enum_property_by_name;   |!-SemResults.SemSubBlockResults[0].SemOffsetsResults[0].UpperOffsetMeasurementStatus-!                                         |!-RequestResult-!|!-RequestResult-!|
+|Check |set_bool_property_by_name;   |!-SemResults.SemSubBlockResults[0].SemOffsetsResults[0].UpperOffsetMargin.RequestResult-!                                      |True             |True             |
+|Check |set_bool_property_by_name;   |!-ModAccResults.ModAccSubBlockResults[0].ModAccCompCarrierResults[0].ComponentCarrierFrequencyErrorMean.RequestResult-!        |True             |True             |
+|Check |set_bool_property_by_name;   |!-ModAccResults.ModAccSubBlockResults[0].ModAccCompCarrierResults[0].CompositeRmsEvmMean.RequestResult-!                       |True             |True             |
+|Check |set_bool_property_by_name;  |!-ModAccResults.ModAccSubBlockResults[0].ModAccCompCarrierResults[0].DetectedCellID.RequestResult-!                            |True             |True             |
+|Check |set_bool_property_by_name;   |!-ModAccResults.ModAccSubBlockResults[0].ModAccCompCarrierResults[0].ModAccBwpResults[0].Pdsch1024QamRmsEvmMean.RequestResult-!|True             |True             |
+|Check |set_bool_property_by_name;   |!-TxpResults.AveragePowerMean.RequestResult-!                                                                                  |True             |True             |
+|Check |set_bool_property_by_name;  |!-PvtResults.PvtSubBlockResults[0].PvtCompCarriersResults[0].PeakWindowedOffPowerTime.RequestResult-!                          |True             |True             |
+|Check |set_enum_property_by_name;  |!-PvtResults.PvtSubBlockResults[0].PvtCompCarriersResults[0].MeasurementStatus-!                                               |!-RequestResult-!|!-RequestResult-!|
+

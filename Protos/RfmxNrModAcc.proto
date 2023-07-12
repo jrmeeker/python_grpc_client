@@ -1,0 +1,259 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxNRMXModAccAutoLevelAllowOverflow {
+    False_010xhnn = 0;
+    True_010dksk = 1;
+    lwbspc = 500;
+}
+
+enum RFmxNRMXModAccAveragingEnabled {
+    False_010kqfc = 0;
+    True_010vema = 1;
+    hdeunc = 500;
+}
+
+enum RFmxNRMXModAccChannelEstimationType {
+    Reference_010rnnk = 0;
+    ReferenceAndData_010mfgp = 1;
+    bpeksq = 500;
+}
+
+enum RFmxNRMXModAccCommonClockSourceEnabled {
+    False_010jzfa = 0;
+    True_010aggl = 1;
+    woolzx = 500;
+}
+
+enum RFmxNRMXModAccCompositeResultsIncludeDmrs {
+    False_010ajij = 0;
+    True_010xqty = 1;
+    irgkvu = 500;
+}
+
+enum RFmxNRMXModAccCompositeResultsIncludePtrs {
+    False_010ppyk = 0;
+    True_010lwqh = 1;
+    yduhvg = 500;
+}
+
+enum RFmxNRMXModAccDCSubcarrierRemovalEnabled {
+    False_010qywa = 0;
+    True_010fjpr = 1;
+    gvncwk = 500;
+}
+
+enum RFmxNRMXModAccEvmReferenceDataSymbolsMode {
+    AcquiredWaveform_010qoup = 0;
+    ReferenceWaveform_010kmvg = 1;
+    qdadgs = 500;
+}
+
+enum RFmxNRMXModAccEvmUnit {
+    Percentage_010leoq = 0;
+    dB_010vmhk = 1;
+    ufemfy = 500;
+}
+
+enum RFmxNRMXModAccFftWindowType {
+    Type3GPP_010icwj = 0;
+    TypeCustom_010zgrj = 1;
+    jfwjkk = 500;
+}
+
+enum RFmxNRMXModAccFrequencyErrorEstimation {
+    Disabled_010isac = 0;
+    Normal_010dwfb = 1;
+    Wide_010hxhk = 2;
+    dguoky = 500;
+}
+
+enum RFmxNRMXModAccIQGainImbalanceCorrectionEnabled {
+    False_010gxxo = 0;
+    True_010hrez = 1;
+    bcvitl = 500;
+}
+
+enum RFmxNRMXModAccIQImpairmentsModel {
+    Tx_010cwbb = 0;
+    Rx_010fcii = 1;
+    shuzbp = 500;
+}
+
+enum RFmxNRMXModAccIQImpairmentsPerSubcarrierEnabled {
+    False_010ckpu = 0;
+    True_010vxcn = 1;
+    muljxd = 500;
+}
+
+enum RFmxNRMXModAccIQMismatchEstimationEnabled {
+    False_010vdgz = 0;
+    True_010dvhg = 1;
+    esjhqy = 500;
+}
+
+enum RFmxNRMXModAccIQOriginOffsetEstimationEnabled {
+    False_010eqth = 0;
+    True_010ppxq = 1;
+    manwjp = 500;
+}
+
+enum RFmxNRMXModAccIQQuadratureErrorCorrectionEnabled {
+    False_010khqv = 0;
+    True_010eemp = 1;
+    avvfhv = 500;
+}
+
+enum RFmxNRMXModAccIQTimingSkewCorrectionEnabled {
+    False_010fxln = 0;
+    True_010hdiv = 1;
+    adtige = 500;
+}
+
+enum RFmxNRMXModAccMagnitudeAndPhaseErrorEnabled {
+    False_010qflh = 0;
+    True_010mswx = 1;
+    cocllo = 500;
+}
+
+enum RFmxNRMXModAccMeasurementLengthUnit {
+    qymjib = 0;
+    Slot_010kppa = 1;
+    Subframe_010ofgo = 3;
+    Time_010hmbw = 6;
+    yhzujo = 500;
+}
+
+enum RFmxNRMXModAccMeasurementMode {
+    Measure_010tozi = 0;
+    CalibrateNoiseFloor_010uxkv = 1;
+    sufbrk = 500;
+}
+
+enum RFmxNRMXModAccMulticarrierFilterEnabled {
+    False_010aeta = 0;
+    True_010qlsg = 1;
+    mhppmg = 500;
+}
+
+enum RFmxNRMXModAccNoiseCompensationEnabled {
+    False_010nepv = 0;
+    True_010pxpt = 1;
+    bcuspt = 500;
+}
+
+enum RFmxNRMXModAccNoiseCompensationInputPowerCheckEnabled {
+    False_010nlif = 0;
+    True_010urwt = 1;
+    nydxvn = 500;
+}
+
+enum RFmxNRMXModAccPhaseTrackingMode {
+    Disabled_010crtf = 0;
+    ReferenceAndData_010kein = 1;
+    Ptrs_010ekmt = 2;
+    ugcrgy = 500;
+}
+
+enum RFmxNRMXModAccPreFftErrorEstimationInterval {
+    Slot_010wzsa = 0;
+    MeasurementLength_010yjuv = 1;
+    ktqrrr = 500;
+}
+
+enum RFmxNRMXModAccShortFrameEnabled {
+    False_010bcrk = 0;
+    True_010iphl = 1;
+    kzhytb = 500;
+}
+
+enum RFmxNRMXModAccShortFrameLengthUnit {
+    xprwrf = 0;
+    Slot_010bwub = 1;
+    Subframe_010tjkp = 3;
+    Time_010upxm = 6;
+    surrps = 500;
+}
+
+enum RFmxNRMXModAccSpectralFlatnessCondition {
+    Normal_010iqql = 0;
+    Extreme_010ottz = 1;
+    ptxucu = 500;
+}
+
+enum RFmxNRMXModAccSpectrumInverted {
+    False_010zlqf = 0;
+    True_010hqqz = 1;
+    fsrvbu = 500;
+}
+
+enum RFmxNRMXModAccSymbolClockErrorEstimationEnabled {
+    False_010gzjf = 0;
+    True_010zyna = 1;
+    ophbht = 500;
+}
+
+enum RFmxNRMXModAccSynchronizationMode {
+    tqrzmd = 0;
+    Slot_010ngdm = 1;
+    Frame_010jzbj = 5;
+    SsbStartFrame_010lyut = 7;
+    rytqks = 500;
+}
+
+enum RFmxNRMXModAccTimingTrackingMode {
+    Disabled_010vehz = 0;
+    ReferenceAndData_010xbyg = 1;
+    ixfoar = 500;
+}
+
+message NrModAcc {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxNRMXModAccAutoLevelAllowOverflow AutoLevelAllowOverflow = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxNRMXModAccAveragingEnabled AveragingEnabled = 4;
+    RFmxNRMXModAccChannelEstimationType ChannelEstimationType = 5;
+    RFmxNRMXModAccCommonClockSourceEnabled CommonClockSourceEnabled = 6;
+    RFmxNRMXModAccCompositeResultsIncludeDmrs CompositeResultsIncludeDmrs = 7;
+    RFmxNRMXModAccCompositeResultsIncludePtrs CompositeResultsIncludePtrs = 8;
+    RFmxNRMXModAccDCSubcarrierRemovalEnabled DCSubcarrierRemovalEnabled = 9;
+    RFmxNRMXModAccEvmReferenceDataSymbolsMode EvmReferenceDataSymbolsMode = 10;
+    RFmxNRMXModAccEvmUnit EvmUnit = 11;
+    google.protobuf.DoubleValue FftWindowLength = 12;
+    google.protobuf.DoubleValue FftWindowOffset = 13;
+    RFmxNRMXModAccFftWindowType FftWindowType = 14;
+    RFmxNRMXModAccFrequencyErrorEstimation FrequencyErrorEstimation = 15;
+    RFmxNRMXModAccIQGainImbalanceCorrectionEnabled IQGainImbalanceCorrectionEnabled = 16;
+    RFmxNRMXModAccIQImpairmentsModel IQImpairmentsModel = 17;
+    RFmxNRMXModAccIQImpairmentsPerSubcarrierEnabled IQImpairmentsPerSubcarrierEnabled = 18;
+    RFmxNRMXModAccIQMismatchEstimationEnabled IQMismatchEstimationEnabled = 19;
+    RFmxNRMXModAccIQOriginOffsetEstimationEnabled IQOriginOffsetEstimationEnabled = 20;
+    RFmxNRMXModAccIQQuadratureErrorCorrectionEnabled IQQuadratureErrorCorrectionEnabled = 21;
+    RFmxNRMXModAccIQTimingSkewCorrectionEnabled IQTimingSkewCorrectionEnabled = 22;
+    RFmxNRMXModAccMagnitudeAndPhaseErrorEnabled MagnitudeAndPhaseErrorEnabled = 23;
+    google.protobuf.BoolValue MeasurementEnabled = 24;
+    google.protobuf.DoubleValue MeasurementLength = 25;
+    RFmxNRMXModAccMeasurementLengthUnit MeasurementLengthUnit = 26;
+    RFmxNRMXModAccMeasurementMode MeasurementMode = 27;
+    google.protobuf.DoubleValue MeasurementOffset = 28;
+    RFmxNRMXModAccMulticarrierFilterEnabled MulticarrierFilterEnabled = 29;
+    RFmxNRMXModAccNoiseCompensationEnabled NoiseCompensationEnabled = 30;
+    RFmxNRMXModAccNoiseCompensationInputPowerCheckEnabled NoiseCompensationInputPowerCheckEnabled = 31;
+    google.protobuf.DoubleValue NoiseCompensationReferenceLevelCoercionLimit = 32;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 33;
+    RFmxNRMXModAccPhaseTrackingMode PhaseTrackingMode = 34;
+    RFmxNRMXModAccPreFftErrorEstimationInterval PreFftErrorEstimationInterval = 35;
+    RFmxNRMXModAccShortFrameEnabled ShortFrameEnabled = 36;
+    google.protobuf.DoubleValue ShortFrameLength = 37;
+    RFmxNRMXModAccShortFrameLengthUnit ShortFrameLengthUnit = 38;
+    RFmxNRMXModAccSpectralFlatnessCondition SpectralFlatnessCondition = 39;
+    RFmxNRMXModAccSpectrumInverted SpectrumInverted = 40;
+    RFmxNRMXModAccSymbolClockErrorEstimationEnabled SymbolClockErrorEstimationEnabled = 41;
+    RFmxNRMXModAccSynchronizationMode SynchronizationMode = 42;
+    RFmxNRMXModAccTimingTrackingMode TimingTrackingMode = 43;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+message SpecAnAcpOffsetsResults {
+    DoubleResult LowerOffsetAbsolutePower = 1;
+    DoubleResult LowerOffsetFrequency = 2;
+    Int32Result LowerOffsetFrequencyReferenceCarrier = 3;
+    DoubleResult LowerOffsetIntegrationBandwidth = 4;
+    Int32Result LowerOffsetPowerReferenceCarrier = 5;
+    DoubleResult LowerOffsetRelativePower = 6;
+    DoubleResult UpperOffsetAbsolutePower = 7;
+    DoubleResult UpperOffsetFrequency = 8;
+    Int32Result UpperOffsetFrequencyReferenceCarrier = 9;
+    DoubleResult UpperOffsetIntegrationBandwidth = 10;
+    Int32Result UpperOffsetPowerReferenceCarrier = 11;
+    DoubleResult UpperOffsetRelativePower = 12;
+}

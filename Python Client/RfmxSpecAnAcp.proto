@@ -1,0 +1,161 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "RfmxSpecAnAcpCompCarrier.proto";
+import "RfmxSpecAnAcpOffsets.proto";
+
+enum RFmxSpecAnMXAcpAmplitudeCorrectionType {
+    RFCenterFrequency_010jfgv = 0;
+    SpectrumFrequencyBin_010vjbl = 1;
+    zmfeca = 500;
+}
+
+enum RFmxSpecAnMXAcpAveragingEnabled {
+    False_010otid = 0;
+    True_010silr = 1;
+    bdfavm = 500;
+}
+
+enum RFmxSpecAnMXAcpAveragingType {
+    Rms_010plkc = 0;
+    Log_010zmsw = 1;
+    Scalar_010tqqf = 2;
+    Maximum_010onmn = 3;
+    Minimum_010cogh = 4;
+    wqgbfk = 500;
+}
+
+enum RFmxSpecAnMXAcpFftOverlapMode {
+    Disabled_010jsec = 0;
+    Automatic_010qvnp = 1;
+    UserDefined_010wncd = 2;
+    eqhszr = 500;
+}
+
+enum RFmxSpecAnMXAcpFftWindow {
+    None_010nnty = 0;
+    FlatTop_010fobq = 1;
+    Hanning_010tnqy = 2;
+    Hamming_010fjwp = 3;
+    Gaussian_010dzsq = 4;
+    Blackman_010avrz = 5;
+    BlackmanHarris_010qylz = 6;
+    KaiserBessel_010jqae = 7;
+    qoosql = 500;
+}
+
+enum RFmxSpecAnMXAcpIFOutputPowerOffsetAuto {
+    False_010npba = 0;
+    True_010bazx = 1;
+    itgpnh = 500;
+}
+
+enum RFmxSpecAnMXAcpMeasurementMethod {
+    Normal_010zjrr = 0;
+    DynamicRange_010wuhg = 1;
+    SequentialFft_010dbgc = 2;
+    nmiqud = 500;
+}
+
+enum RFmxSpecAnMXAcpMeasurementMode {
+    Measure_010zrmc = 0;
+    CalibrateNoiseFloor_010pztq = 1;
+    zsqrsu = 500;
+}
+
+enum RFmxSpecAnMXAcpNoiseCalibrationAveragingAuto {
+    False_010dseh = 0;
+    True_010xwwv = 1;
+    dhmzuy = 500;
+}
+
+enum RFmxSpecAnMXAcpNoiseCalibrationMode {
+    Manual_010nnpr = 0;
+    Auto_010ydqv = 1;
+    vxuryf = 500;
+}
+
+enum RFmxSpecAnMXAcpNoiseCompensationEnabled {
+    False_010vopl = 0;
+    True_010jlzu = 1;
+    hbtyhd = 500;
+}
+
+enum RFmxSpecAnMXAcpNoiseCompensationType {
+    AnalyzerAndTermination_010ofpp = 0;
+    AnalyzerOnly_010fudl = 1;
+    dztpdi = 500;
+}
+
+enum RFmxSpecAnMXAcpPowerUnits {
+    dBm_010xgnf = 0;
+    dBmPerHertz_010yrao = 1;
+    rbqizs = 500;
+}
+
+enum RFmxSpecAnMXAcpRbwAutoBandwidth {
+    False_010fnxz = 0;
+    True_010vngp = 1;
+    heldbj = 500;
+}
+
+enum RFmxSpecAnMXAcpRbwFilterBandwidthDefinition {
+    BandwidthDefinition3dB_010lqru = 0;
+    BandwidthDefinitionBinWidth_010irxb = 2;
+    onaqda = 500;
+}
+
+enum RFmxSpecAnMXAcpRbwFilterType {
+    FftBased_010oozx = 0;
+    Gaussian_010vkgp = 1;
+    Flat_010btuq = 2;
+    bhyiuu = 500;
+}
+
+enum RFmxSpecAnMXAcpSweepTimeAuto {
+    False_010pqdb = 0;
+    True_010jvzi = 1;
+    vezkye = 500;
+}
+
+message SpecAnAcp {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxSpecAnMXAcpAmplitudeCorrectionType AmplitudeCorrectionType = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxSpecAnMXAcpAveragingEnabled AveragingEnabled = 4;
+    RFmxSpecAnMXAcpAveragingType AveragingType = 5;
+    google.protobuf.DoubleValue FarIFOutputPowerOffset = 6;
+    google.protobuf.DoubleValue FftOverlap = 7;
+    RFmxSpecAnMXAcpFftOverlapMode FftOverlapMode = 8;
+    google.protobuf.DoubleValue FftPadding = 9;
+    RFmxSpecAnMXAcpFftWindow FftWindow = 10;
+    RFmxSpecAnMXAcpIFOutputPowerOffsetAuto IFOutputPowerOffsetAuto = 11;
+    google.protobuf.BoolValue MeasurementEnabled = 12;
+    RFmxSpecAnMXAcpMeasurementMethod MeasurementMethod = 13;
+    RFmxSpecAnMXAcpMeasurementMode MeasurementMode = 14;
+    google.protobuf.DoubleValue NearIFOutputPowerOffset = 15;
+    RFmxSpecAnMXAcpNoiseCalibrationAveragingAuto NoiseCalibrationAveragingAuto = 16;
+    google.protobuf.Int32Value NoiseCalibrationAveragingCount = 17;
+    RFmxSpecAnMXAcpNoiseCalibrationMode NoiseCalibrationMode = 18;
+    RFmxSpecAnMXAcpNoiseCompensationEnabled NoiseCompensationEnabled = 19;
+    RFmxSpecAnMXAcpNoiseCompensationType NoiseCompensationType = 20;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 21;
+    google.protobuf.Int32Value NumberOfCarriers = 22;
+    google.protobuf.Int32Value NumberOfOffsets = 23;
+    RFmxSpecAnMXAcpPowerUnits PowerUnits = 24;
+    RFmxSpecAnMXAcpRbwAutoBandwidth RbwFilterAutoBandwidth = 25;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 26;
+    RFmxSpecAnMXAcpRbwFilterBandwidthDefinition RbwFilterBandwidthDefinition = 27;
+    RFmxSpecAnMXAcpRbwFilterType RbwFilterType = 28;
+    google.protobuf.Int32Value SequentialFftSize = 29;
+    RFmxSpecAnMXAcpSweepTimeAuto SweepTimeAuto = 30;
+    google.protobuf.DoubleValue SweepTimeInterval = 31;
+
+    repeated SpecAnAcpCompCarrier AcpCompCarrier = 32;
+    repeated SpecAnAcpOffsets AcpOffsets = 33;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxSpecAnAcpCompCarrierResults.proto";
+import "RfmxSpecAnAcpOffsetsResults.proto";
+
+message SpecAnAcpResults {
+    DoubleResult FrequencyResolution = 1;
+    DoubleResult TotalCarrierPower = 2;
+
+    repeated SpecAnAcpCompCarrierResults AcpCompCarrierResults = 3;
+    repeated SpecAnAcpOffsetsResults AcpOffsetsResults = 4;
+}

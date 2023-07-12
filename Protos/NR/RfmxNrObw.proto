@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrObwSubBlock.proto";
+
+enum RFmxNRMXObwAmplitudeCorrectionType {
+    RFCenterFrequency_010iyhz = 0;
+    SpectrumFrequencyBin_010wxva = 1;
+    wdpqvn = 500;
+}
+
+enum RFmxNRMXObwAveragingEnabled {
+    False_010kjzd = 0;
+    True_010gzdi = 1;
+    wnjcnd = 500;
+}
+
+enum RFmxNRMXObwAveragingType {
+    Rms_010reew = 0;
+    Log_010ycks = 1;
+    Scalar_010rtum = 2;
+    Maximum_010xvhd = 3;
+    Minimum_010jgfk = 4;
+    vzxcib = 500;
+}
+
+enum RFmxNRMXObwFftWindow {
+    None_010nabt = 0;
+    FlatTop_010qujr = 1;
+    Hanning_010irzs = 2;
+    Hamming_010stdr = 3;
+    Gaussian_010rgit = 4;
+    Blackman_010cias = 5;
+    BlackmanHarris_010ecwd = 6;
+    KaiserBessel_010hshb = 7;
+    nwokrx = 500;
+}
+
+enum RFmxNRMXObwRbwAutoBandwidth {
+    False_010dadf = 0;
+    True_010mqeq = 1;
+    olhehr = 500;
+}
+
+enum RFmxNRMXObwRbwFilterType {
+    FftBased_010tpzf = 0;
+    Gaussian_010zipn = 1;
+    Flat_010xgjq = 2;
+    kxfves = 500;
+}
+
+enum RFmxNRMXObwSpanAuto {
+    False_010atci = 0;
+    True_010pwvk = 1;
+    onnkwd = 500;
+}
+
+enum RFmxNRMXObwSweepTimeAuto {
+    False_010kqix = 0;
+    True_010xjli = 1;
+    iqcwvw = 500;
+}
+
+message NrObw {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxNRMXObwAmplitudeCorrectionType AmplitudeCorrectionType = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxNRMXObwAveragingEnabled AveragingEnabled = 4;
+    RFmxNRMXObwAveragingType AveragingType = 5;
+    RFmxNRMXObwFftWindow FftWindow = 6;
+    google.protobuf.BoolValue MeasurementEnabled = 7;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 8;
+    RFmxNRMXObwRbwAutoBandwidth RbwFilterAutoBandwidth = 9;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 10;
+    RFmxNRMXObwRbwFilterType RbwFilterType = 11;
+    RFmxNRMXObwSpanAuto SpanAuto = 12;
+    RFmxNRMXObwSweepTimeAuto SweepTimeAuto = 13;
+    google.protobuf.DoubleValue SweepTimeInterval = 14;
+
+    repeated NrObwSubBlock ObwSubBlock = 15;
+}

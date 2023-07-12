@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/ResultWrappers.proto";
+
+enum RsmxNRMXSchDetectedModulationType {
+    PiBy2_Bpsk_010ertv = 0;
+    Qpsk_010gawm = 1;
+    Qam16_010lqac = 2;
+    Qam64_010jwzn = 3;
+    Qam256_010hkfb = 4;
+    Qam1024_010mtja = 5;
+    Psk8_010rkdc = 100;
+    RequestResult_010beos = 400;
+    imqqpa = 500;
+}
+
+message NrModAccUserResults {
+    DoubleResult PdschDataPeakEvmMaximum = 1;
+    DoubleResult PdschDataRmsEvmMean = 2;
+    DoubleResult PdschDmrsPeakEvmMaximum = 3;
+    DoubleResult PdschDmrsRmsEvmMean = 4;
+    DoubleResult PdschPtrsPeakEvmMaximum = 5;
+    DoubleResult PdschPtrsRmsEvmMean = 6;
+    DoubleResult PuschDataPeakEvmMaximum = 7;
+    DoubleResult PuschDataRmsEvmMean = 8;
+    DoubleResult PuschDmrsPeakEvmMaximum = 9;
+    DoubleResult PuschDmrsRmsEvmMean = 10;
+    DoubleResult PuschPtrsPeakEvmMaximum = 11;
+    DoubleResult PuschPtrsRmsEvmMean = 12;
+    RsmxNRMXSchDetectedModulationType SchDetectedModulationType = 13;
+}

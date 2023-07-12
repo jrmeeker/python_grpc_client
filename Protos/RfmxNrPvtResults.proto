@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "ResultWrappers.proto";
+
+import "RfmxNrPvtSubBlockResults.proto";
+
+message NrPvtResults {
+
+    repeated NrPvtSubBlockResults PvtSubBlockResults = 1;
+}

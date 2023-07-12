@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxNRMXAcpOffsetSideband {
+    Negative_010kxrb = 0;
+    Positive_010cwzb = 1;
+    Both_010aqjz = 2;
+    edochs = 500;
+}
+
+message NrAcpSubBlockOffset {
+    google.protobuf.DoubleValue OffsetFrequency = 1;
+    google.protobuf.DoubleValue OffsetIntegrationBandwidth = 2;
+    RFmxNRMXAcpOffsetSideband OffsetSideband = 3;
+}

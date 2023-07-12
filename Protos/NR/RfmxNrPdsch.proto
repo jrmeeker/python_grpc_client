@@ -1,0 +1,99 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrPdschCluster.proto";
+
+enum RFmxNRMXPdschDmrsConfigurationType {
+    Type1_010ampn = 0;
+    Type2_010hjap = 1;
+    dsuxau = 500;
+}
+
+enum RFmxNRMXPdschDmrsDuration {
+    qoheps = 0;
+    SingleSymbol_010vngv = 1;
+    DoubleSymbol_010myvq = 2;
+    rdkupw = 500;
+}
+
+enum RFmxNRMXPdschDmrsPowerMode {
+    CdmGroups_010aajz = 0;
+    UserDefined_010okmg = 1;
+    euhjus = 500;
+}
+
+enum RFmxNRMXPdschDmrsReleaseVersion {
+    Release15_010kfrv = 0;
+    Release16_010abum = 1;
+    gubink = 500;
+}
+
+enum RFmxNRMXPdschDmrsScramblingIDMode {
+    CellID_010xzha = 0;
+    UserDefined_010hetq = 1;
+    eiqego = 500;
+}
+
+enum RFmxNRMXPdschMappingType {
+    TypeA_010jmoc = 0;
+    TypeB_010ecfm = 1;
+    mptocn = 500;
+}
+
+enum RFmxNRMXPdschModulationType {
+    upyfwc = 0;
+    Qpsk_010jemg = 1;
+    Qam16_010bqzu = 2;
+    Qam64_010ajev = 3;
+    Qam256_010ugdt = 4;
+    Qam1024_010gyek = 5;
+    Psk8_010ekns = 100;
+    htbfwp = 500;
+}
+
+enum RFmxNRMXPdschPtrsEnabled {
+    False_010jkie = 0;
+    True_010eezh = 1;
+    bodlmd = 500;
+}
+
+enum RFmxNRMXPdschPtrsPowerMode {
+    Standard_010kxtw = 0;
+    UserDefined_010jaia = 1;
+    blxzrt = 500;
+}
+
+message NrPdsch {
+    google.protobuf.Int32Value EpreRatioPort = 1;
+    google.protobuf.Int32Value PdschDmrsAdditionalPositions = 2;
+    google.protobuf.StringValue PdschDmrsAntennaPorts = 3;
+    RFmxNRMXPdschDmrsConfigurationType PdschDmrsConfigurationType = 4;
+    RFmxNRMXPdschDmrsDuration PdschDmrsDuration = 5;
+    google.protobuf.Int32Value PdschDmrsnScid = 6;
+    google.protobuf.Int32Value PdschDmrsNumberOfCdmGroups = 7;
+    google.protobuf.DoubleValue PdschDmrsPower = 8;
+    RFmxNRMXPdschDmrsPowerMode PdschDmrsPowerMode = 9;
+    RFmxNRMXPdschDmrsReleaseVersion PdschDmrsReleaseVersion = 10;
+    google.protobuf.Int32Value PdschDmrsScramblingID = 11;
+    RFmxNRMXPdschDmrsScramblingIDMode PdschDmrsScramblingIDMode = 12;
+    google.protobuf.Int32Value PdschDmrsTypeAPosition = 13;
+    RFmxNRMXPdschMappingType PdschMappingType = 14;
+    RFmxNRMXPdschModulationType PdschModulationType = 15;
+    google.protobuf.Int32Value PdschNumberOfResourceBlockClusters = 16;
+    google.protobuf.StringValue PdschPtrsAntennaPorts = 17;
+    RFmxNRMXPdschPtrsEnabled PdschPtrsEnabled = 18;
+    google.protobuf.Int32Value PdschPtrsFrequencyDensity = 19;
+    google.protobuf.DoubleValue PdschPtrsPower = 20;
+    RFmxNRMXPdschPtrsPowerMode PdschPtrsPowerMode = 21;
+    google.protobuf.Int32Value PdschPtrsREOffset = 22;
+    google.protobuf.Int32Value PdschPtrsTimeDensity = 23;
+    google.protobuf.StringValue PdschSlotAllocation = 24;
+    google.protobuf.StringValue PdschSymbolAllocation = 25;
+
+    repeated NrPdschCluster PdschCluster = 26;
+}

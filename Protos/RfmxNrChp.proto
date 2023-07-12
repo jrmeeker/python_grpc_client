@@ -1,0 +1,118 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxNRMXChpAmplitudeCorrectionType {
+    RFCenterFrequency_010blya = 0;
+    SpectrumFrequencyBin_010gnyj = 1;
+    meiuxw = 500;
+}
+
+enum RFmxNRMXChpAveragingEnabled {
+    False_010ilqz = 0;
+    True_010mtpe = 1;
+    gzbita = 500;
+}
+
+enum RFmxNRMXChpAveragingType {
+    Rms_010cbgw = 0;
+    Log_010llce = 1;
+    Scalar_010qohw = 2;
+    Maximum_010aqbq = 3;
+    Minimum_010jjxt = 4;
+    zopbxg = 500;
+}
+
+enum RFmxNRMXChpFftWindow {
+    None_010dxfz = 0;
+    FlatTop_010zxtx = 1;
+    Hanning_010glxl = 2;
+    Hamming_010imte = 3;
+    Gaussian_010ucsp = 4;
+    Blackman_010tzcp = 5;
+    BlackmanHarris_010prla = 6;
+    KaiserBessel_010anmf = 7;
+    zfhfzr = 500;
+}
+
+enum RFmxNRMXChpIntegrationBandwidthType {
+    SignalBandwidth_010pjdd = 0;
+    ChannelBandwidth_010jqty = 1;
+    bkzvtm = 500;
+}
+
+enum RFmxNRMXChpMeasurementMode {
+    Measure_010jind = 0;
+    CalibrateNoiseFloor_010upjh = 1;
+    mswszs = 500;
+}
+
+enum RFmxNRMXChpNoiseCalibrationAveragingAuto {
+    False_010mden = 0;
+    True_010fdni = 1;
+    mpqmwr = 500;
+}
+
+enum RFmxNRMXChpNoiseCalibrationMode {
+    Manual_010qabf = 0;
+    Auto_010tzvr = 1;
+    seljih = 500;
+}
+
+enum RFmxNRMXChpNoiseCompensationEnabled {
+    False_010wkhq = 0;
+    True_010qalx = 1;
+    glqqza = 500;
+}
+
+enum RFmxNRMXChpNoiseCompensationType {
+    AnalyzerAndTermination_010vxnh = 0;
+    AnalyzerOnly_010srqm = 1;
+    rrzzwv = 500;
+}
+
+enum RFmxNRMXChpRbwAutoBandwidth {
+    False_010lacv = 0;
+    True_010ufmb = 1;
+    izvvgs = 500;
+}
+
+enum RFmxNRMXChpRbwFilterType {
+    FftBased_010upod = 0;
+    Gaussian_010avvu = 1;
+    Flat_010qdqq = 2;
+    rktqrq = 500;
+}
+
+enum RFmxNRMXChpSweepTimeAuto {
+    False_010epmf = 0;
+    True_010iuvt = 1;
+    oupnmx = 500;
+}
+
+message NrChp {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxNRMXChpAmplitudeCorrectionType AmplitudeCorrectionType = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxNRMXChpAveragingEnabled AveragingEnabled = 4;
+    RFmxNRMXChpAveragingType AveragingType = 5;
+    RFmxNRMXChpFftWindow FftWindow = 6;
+    RFmxNRMXChpIntegrationBandwidthType IntegrationBandwidthType = 7;
+    google.protobuf.BoolValue MeasurementEnabled = 8;
+    RFmxNRMXChpMeasurementMode MeasurementMode = 9;
+    RFmxNRMXChpNoiseCalibrationAveragingAuto NoiseCalibrationAveragingAuto = 10;
+    google.protobuf.Int32Value NoiseCalibrationAveragingCount = 11;
+    RFmxNRMXChpNoiseCalibrationMode NoiseCalibrationMode = 12;
+    RFmxNRMXChpNoiseCompensationEnabled NoiseCompensationEnabled = 13;
+    RFmxNRMXChpNoiseCompensationType NoiseCompensationType = 14;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 15;
+    RFmxNRMXChpRbwAutoBandwidth RbwFilterAutoBandwidth = 16;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 17;
+    RFmxNRMXChpRbwFilterType RbwFilterType = 18;
+    RFmxNRMXChpSweepTimeAuto SweepTimeAuto = 19;
+    google.protobuf.DoubleValue SweepTimeInterval = 20;
+}

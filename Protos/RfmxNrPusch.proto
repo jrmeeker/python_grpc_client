@@ -1,0 +1,129 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "RfmxNrPuschCluster.proto";
+
+enum RFmxNRMXPuschDmrsConfigurationType {
+    Type1_010ytts = 0;
+    Type2_010shkl = 1;
+    fyrhnr = 500;
+}
+
+enum RFmxNRMXPuschDmrsDuration {
+    zhbfye = 0;
+    SingleSymbol_010dhrn = 1;
+    DoubleSymbol_010rynw = 2;
+    idwcig = 500;
+}
+
+enum RFmxNRMXPuschDmrsGroupHoppingEnabled {
+    False_010dfif = 0;
+    True_010bqem = 1;
+    vkeptp = 500;
+}
+
+enum RFmxNRMXPuschDmrsPowerMode {
+    CdmGroups_010doof = 0;
+    UserDefined_010xnfq = 1;
+    bgattn = 500;
+}
+
+enum RFmxNRMXPuschDmrsPuschIDMode {
+    CellID_010dcco = 0;
+    UserDefined_010ygnu = 1;
+    zwdiaq = 500;
+}
+
+enum RFmxNRMXPuschDmrsReleaseVersion {
+    Release15_010lhjc = 0;
+    Release16_010fxtt = 1;
+    oqfubm = 500;
+}
+
+enum RFmxNRMXPuschDmrsScramblingIDMode {
+    CellID_010dceh = 0;
+    UserDefined_010writ = 1;
+    ipqmbi = 500;
+}
+
+enum RFmxNRMXPuschDmrsSequenceHoppingEnabled {
+    False_010psco = 0;
+    True_010noeu = 1;
+    xyowtj = 500;
+}
+
+enum RFmxNRMXPuschMappingType {
+    TypeA_010nlje = 0;
+    TypeB_010fbrw = 1;
+    rwlihs = 500;
+}
+
+enum RFmxNRMXPuschModulationType {
+    PiBy2_Bpsk_010ytlt = 0;
+    Qpsk_010vkew = 1;
+    Qam16_010oqhm = 2;
+    Qam64_010hifg = 3;
+    Qam256_010tayy = 4;
+    Qam1024_010gxgm = 5;
+    Psk8_010gars = 100;
+    agdfgm = 500;
+}
+
+enum RFmxNRMXPuschPtrsEnabled {
+    False_010vdnu = 0;
+    True_010aifr = 1;
+    wtxsti = 500;
+}
+
+enum RFmxNRMXPuschPtrsPowerMode {
+    Standard_010rlck = 0;
+    UserDefined_010kjlb = 1;
+    nynvtm = 500;
+}
+
+enum RFmxNRMXPuschTransformPrecodingEnabled {
+    False_010vimc = 0;
+    True_010gvmb = 1;
+    tyaptp = 500;
+}
+
+message NrPusch {
+    google.protobuf.Int32Value NumberOfPtrsGroups = 1;
+    google.protobuf.Int32Value PuschDmrsAdditionalPositions = 2;
+    google.protobuf.StringValue PuschDmrsAntennaPorts = 3;
+    RFmxNRMXPuschDmrsConfigurationType PuschDmrsConfigurationType = 4;
+    RFmxNRMXPuschDmrsDuration PuschDmrsDuration = 5;
+    RFmxNRMXPuschDmrsGroupHoppingEnabled PuschDmrsGroupHoppingEnabled = 6;
+    google.protobuf.Int32Value PuschDmrsNscid = 7;
+    google.protobuf.Int32Value PuschDmrsNumberOfCdmGroups = 8;
+    google.protobuf.DoubleValue PuschDmrsPower = 9;
+    RFmxNRMXPuschDmrsPowerMode PuschDmrsPowerMode = 10;
+    google.protobuf.Int32Value PuschDmrsPuschID = 11;
+    RFmxNRMXPuschDmrsPuschIDMode PuschDmrsPuschIDMode = 12;
+    RFmxNRMXPuschDmrsReleaseVersion PuschDmrsReleaseVersion = 13;
+    google.protobuf.Int32Value PuschDmrsScramblingID = 14;
+    RFmxNRMXPuschDmrsScramblingIDMode PuschDmrsScramblingIDMode = 15;
+    RFmxNRMXPuschDmrsSequenceHoppingEnabled PuschDmrsSequenceHoppingEnabled = 16;
+    google.protobuf.Int32Value PuschDmrsTypeAPosition = 17;
+    RFmxNRMXPuschMappingType PuschMappingType = 18;
+    RFmxNRMXPuschModulationType PuschModulationType = 19;
+    google.protobuf.Int32Value PuschNumberOfResourceBlockClusters = 20;
+    google.protobuf.StringValue PuschPtrsAntennaPorts = 21;
+    RFmxNRMXPuschPtrsEnabled PuschPtrsEnabled = 22;
+    google.protobuf.Int32Value PuschPtrsFrequencyDensity = 23;
+    google.protobuf.DoubleValue PuschPtrsPower = 24;
+    RFmxNRMXPuschPtrsPowerMode PuschPtrsPowerMode = 25;
+    google.protobuf.Int32Value PuschPtrsREOffset = 26;
+    google.protobuf.Int32Value PuschPtrsTimeDensity = 27;
+    google.protobuf.StringValue PuschSlotAllocation = 28;
+    google.protobuf.StringValue PuschSymbolAllocation = 29;
+    RFmxNRMXPuschTransformPrecodingEnabled PuschTransformPrecodingEnabled = 30;
+    google.protobuf.Int32Value SamplesPerPtrsGroup = 31;
+
+    repeated NrPuschCluster PuschCluster = 32;
+}

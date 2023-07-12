@@ -1,0 +1,157 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+import "Protos/NR/RfmxNrAcpSubBlock.proto";
+
+enum RFmxNRMXAcpAmplitudeCorrectionType {
+    RFCenterFrequency_010ifrq = 0;
+    SpectrumFrequencyBin_010gogt = 1;
+    hggaed = 500;
+}
+
+enum RFmxNRMXAcpAveragingEnabled {
+    False_010rtgt = 0;
+    True_010srnv = 1;
+    qdpwwj = 500;
+}
+
+enum RFmxNRMXAcpAveragingType {
+    Rms_010qrfm = 0;
+    Log_010mxfg = 1;
+    Scalar_010gurc = 2;
+    Maximum_010viot = 3;
+    Minimum_010uzlg = 4;
+    ilxujp = 500;
+}
+
+enum RFmxNRMXAcpChannelConfigurationType {
+    Standard_010emoo = 0;
+    Custom_010bksx = 1;
+    NS_29_010dpbu = 2;
+    nhxkml = 500;
+}
+
+enum RFmxNRMXAcpFftOverlapMode {
+    Disabled_010bqwf = 0;
+    Automatic_010gxip = 1;
+    UserDefined_010kqae = 2;
+    ukcxss = 500;
+}
+
+enum RFmxNRMXAcpFftWindow {
+    None_010sssh = 0;
+    FlatTop_010kyez = 1;
+    Hanning_010rzle = 2;
+    Hamming_010iyym = 3;
+    Gaussian_010tstz = 4;
+    Blackman_010gqfl = 5;
+    BlackmanHarris_010zcwy = 6;
+    KaiserBessel_010vqrq = 7;
+    ofsusu = 500;
+}
+
+enum RFmxNRMXAcpIFOutputPowerOffsetAuto {
+    False_010gyag = 0;
+    True_010gieg = 1;
+    hcgirk = 500;
+}
+
+enum RFmxNRMXAcpMeasurementMethod {
+    Normal_010etmb = 0;
+    DynamicRange_010mhhh = 1;
+    SequentialFft_010bfea = 2;
+    hupcfd = 500;
+}
+
+enum RFmxNRMXAcpMeasurementMode {
+    Measure_010tzmu = 0;
+    CalibrateNoiseFloor_010yzkw = 1;
+    gtutsn = 500;
+}
+
+enum RFmxNRMXAcpNoiseCalibrationAveragingAuto {
+    False_010zhmv = 0;
+    True_010tqhl = 1;
+    mywucf = 500;
+}
+
+enum RFmxNRMXAcpNoiseCalibrationMode {
+    Manual_010bjqf = 0;
+    Auto_010wcos = 1;
+    xjumrq = 500;
+}
+
+enum RFmxNRMXAcpNoiseCompensationEnabled {
+    False_010aonh = 0;
+    True_010nrba = 1;
+    iujpvh = 500;
+}
+
+enum RFmxNRMXAcpNoiseCompensationType {
+    AnalyzerAndTermination_010moxd = 0;
+    AnalyzerOnly_010wevx = 1;
+    dpxqyh = 500;
+}
+
+enum RFmxNRMXAcpPowerUnits {
+    dBm_010kdag = 0;
+    dBmByHz_010yrky = 1;
+    lohlea = 500;
+}
+
+enum RFmxNRMXAcpRbwAutoBandwidth {
+    False_010bvvh = 0;
+    True_010ghfi = 1;
+    lrqmud = 500;
+}
+
+enum RFmxNRMXAcpRbwFilterType {
+    FftBased_010kxkw = 0;
+    Gaussian_010ttpe = 1;
+    Flat_010ucre = 2;
+    wodivl = 500;
+}
+
+enum RFmxNRMXAcpSweepTimeAuto {
+    False_010auvh = 0;
+    True_010tpjq = 1;
+    cbrjql = 500;
+}
+
+message NrAcp {
+    google.protobuf.BoolValue AllTracesEnabled = 1;
+    RFmxNRMXAcpAmplitudeCorrectionType AmplitudeCorrectionType = 2;
+    google.protobuf.Int32Value AveragingCount = 3;
+    RFmxNRMXAcpAveragingEnabled AveragingEnabled = 4;
+    RFmxNRMXAcpAveragingType AveragingType = 5;
+    RFmxNRMXAcpChannelConfigurationType ChannelConfigurationType = 6;
+    google.protobuf.DoubleValue FarIFOutputPowerOffset = 7;
+    google.protobuf.DoubleValue FftOverlap = 8;
+    RFmxNRMXAcpFftOverlapMode FftOverlapMode = 9;
+    RFmxNRMXAcpFftWindow FftWindow = 10;
+    RFmxNRMXAcpIFOutputPowerOffsetAuto IFOutputPowerOffsetAuto = 11;
+    google.protobuf.BoolValue MeasurementEnabled = 12;
+    RFmxNRMXAcpMeasurementMethod MeasurementMethod = 13;
+    RFmxNRMXAcpMeasurementMode MeasurementMode = 14;
+    google.protobuf.DoubleValue NearIFOutputPowerOffset = 15;
+    RFmxNRMXAcpNoiseCalibrationAveragingAuto NoiseCalibrationAveragingAuto = 16;
+    google.protobuf.Int32Value NoiseCalibrationAveragingCount = 17;
+    RFmxNRMXAcpNoiseCalibrationMode NoiseCalibrationMode = 18;
+    RFmxNRMXAcpNoiseCompensationEnabled NoiseCompensationEnabled = 19;
+    RFmxNRMXAcpNoiseCompensationType NoiseCompensationType = 20;
+    google.protobuf.Int32Value NumberOfAnalysisThreads = 21;
+    RFmxNRMXAcpPowerUnits PowerUnits = 22;
+    RFmxNRMXAcpRbwAutoBandwidth RbwFilterAutoBandwidth = 23;
+    google.protobuf.DoubleValue RbwFilterBandwidth = 24;
+    RFmxNRMXAcpRbwFilterType RbwFilterType = 25;
+    google.protobuf.Int32Value SequentialFftSize = 26;
+    RFmxNRMXAcpSweepTimeAuto SweepTimeAuto = 27;
+    google.protobuf.DoubleValue SweepTimeInterval = 28;
+
+    repeated NrAcpSubBlock AcpSubBlock = 29;
+}

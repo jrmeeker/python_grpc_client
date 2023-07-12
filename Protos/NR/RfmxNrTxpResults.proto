@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+import "Protos/ResultWrappers.proto";
+
+message NrTxpResults {
+    DoubleResult AveragePowerMean = 1;
+    DoubleResult PeakPowerMaximum = 2;
+}

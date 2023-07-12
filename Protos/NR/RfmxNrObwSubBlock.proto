@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+message NrObwSubBlock {
+    google.protobuf.DoubleValue Span = 1;
+}

@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "OranAptRuClient";
+
+package multi_site_instr;
+
+import "google/protobuf/wrappers.proto";
+
+enum RFmxSpecAnMXAcpOffsetEnabled {
+    False_010dkig = 0;
+    True_010lmpj = 1;
+    thqaok = 500;
+}
+
+enum RFmxSpecAnMXAcpOffsetFrequencyDefinition {
+    CarrierCenterToOffsetCenter_010lboq = 0;
+    CarrierCenterToOffsetEdge_010tkad = 1;
+    jtfsfn = 500;
+}
+
+enum RFmxSpecAnMXAcpOffsetPowerReferenceCarrier {
+    Closest_010hsue = 0;
+    Highest_010mylz = 1;
+    Composite_010bgxk = 2;
+    Specific_010cquv = 3;
+    phzkdb = 500;
+}
+
+enum RFmxSpecAnMXAcpOffsetRrcFilterEnabled {
+    False_010lyjd = 0;
+    True_010wzap = 1;
+    ashcba = 500;
+}
+
+enum RFmxSpecAnMXAcpOffsetSideband {
+    Negative_010mloq = 0;
+    Positive_010zlah = 1;
+    Both_010tjhk = 2;
+    joeytu = 500;
+}
+
+message SpecAnAcpOffsets {
+    RFmxSpecAnMXAcpOffsetEnabled OffsetEnabled = 1;
+    google.protobuf.DoubleValue OffsetFrequency = 2;
+    RFmxSpecAnMXAcpOffsetFrequencyDefinition OffsetFrequencyDefinition = 3;
+    google.protobuf.DoubleValue OffsetIntegrationBandwidth = 4;
+    RFmxSpecAnMXAcpOffsetPowerReferenceCarrier OffsetPowerReferenceCarrier = 5;
+    google.protobuf.Int32Value OffsetPowerReferenceSpecific = 6;
+    google.protobuf.DoubleValue OffsetRelativeAttenuation = 7;
+    google.protobuf.DoubleValue OffsetRrcFilterAlpha = 8;
+    RFmxSpecAnMXAcpOffsetRrcFilterEnabled OffsetRrcFilterEnabled = 9;
+    RFmxSpecAnMXAcpOffsetSideband OffsetSideband = 10;
+}
